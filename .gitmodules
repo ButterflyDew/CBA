@@ -1,0 +1,3 @@
+[submodule "Hub-Labeling"]
+	path = Hub-Labeling
+	url = https://github.com/ButterflyDew/Hub-Labeling.git
