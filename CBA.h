@@ -10,7 +10,7 @@ public:
 
     vector <int> MaxM(Graph &G, vector <vector <int> > &K, int D, int v);
 
-    Tree Expand(Tree T, int c, vector <int> path);
+    void Expand(Tree &T, int c, vector <int> path);
 
     int get_sum(Graph &G, vector <int> &M, int v,int D);
 };

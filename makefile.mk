@@ -1,44 +1,20 @@
-# 设置编译器和编译选项
-CXX = g++
-CXXFLAGS = -std=c++17 -Wall -O2
+CXX = g++ # C++编译器
+CXXFLAGS = -std=c++17 -Wall -O2# 编译选项
 
-# 定义目标文件夹
-BUILD_DIR = build
-SRC_DIR = src
-HUB_LABELING_DIR = Hub-Labeling
+TARGET = debug_cba # 目标可执行文件名
 
-# 定义目标文件
-TARGET = debug
+# 列出你的源文件
+SOURCES = Hub-Labeling/global.cpp Hub-Labeling/static_hl.cpp Hub-Labeling/betweenness_centrality.cpp Hub-Labeling/hbll.cpp CBA.cpp debug_cba.cpp
+HEADERS = Hub-Labeling/global.h Hub-Labeling/static_hl.h Hub-Labeling/betweenness_centrality.h Hub-Labeling/hbll.h CBA.h
 
-# 定义源文件列表
-SOURCES = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(HUB_LABELING_DIR)/*.cpp)
+# 根据需要添加更多源文件
+# SOURCES += additional_file.cpp
 
-# 生成对象文件列表
-OBJECTS = $(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.o, $(SOURCES))
+# 生成目标的规则
+$(TARGET): $(SOURCES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) -o $@ $(SOURCES)
 
-# 头文件列表
-HEADERS = $(wildcard $(SRC_DIR)/*.h) $(wildcard $(HUB_LABELING_DIR)/*.h)
+.PHONY: clean
 
-# 定义头文件搜索路径
-INCLUDES = -I$(SRC_DIR) -I$(HUB_LABELING_DIR)
-
-# 默认目标
-all: $(TARGET)
-
-# 生成可执行文件
-$(TARGET): $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
-
-# 生成对象文件
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
-
-$(BUILD_DIR)/%.o: $(HUB_LABELING_DIR)/%.cpp $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
-
-# 清理生成的文件
 clean:
-	rm -f $(BUILD_DIR)/*.o $(TARGET)
-
-# 声明伪目标，以防文件名与目标名冲突
-.PHONY: all clean
+	rm -f $(TARGET)
