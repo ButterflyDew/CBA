@@ -1,5 +1,6 @@
 #include "CBA.h"
 #include <cstdio>
+#include <string>
 
 
 void CBA::Expand(Tree &T, int c, vector <int> path)
@@ -117,7 +118,7 @@ vector <int> CBA::MaxM(Graph &G, vector <vector <int> > &K, int D, int v)
 
 Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
 {
-    hbll.build_hbll(G);
+    //hbll.build_hbll(G);
 
     auto [M, c] = OPT_MC(G, K, D);
     
@@ -180,4 +181,38 @@ Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
         // cerr << "the " << d_ct << "add is ok" << endl;
     }
     return T;
+}
+
+
+void CBA::read_hbll(string filepre)
+{
+    ifstream inputFile(filepre + "/hbll.txt");
+
+    if (!inputFile.is_open()) 
+        cerr << "Can't open file: " <<  filepre + "/hbll.txt" << endl;
+
+    string line;
+    hbll.L.push_back(vector <HBLL::Triple> ());
+    hbll.prew.push_back(vector <int> ());
+
+    while (getline(inputFile, line)) 
+    {
+        istringstream lines(line);
+        string lin;
+        ++ hbll.n;
+        hbll.L.push_back(vector <HBLL::Triple> ());
+        hbll.prew.push_back(vector <int> ());
+        while(getline(lines, lin, ','))
+        {
+            //cout << "set " << lin << endl;
+            auto num = extractIntegers(lin);
+            if(num.size() == 4)
+            {
+                hbll.L[hbll.n].push_back(HBLL::Triple(num[0], num[1], num[2]));
+                hbll.prew[hbll.n].push_back(num[3]);
+            }
+            else 
+                cerr << "invalid hbll input" << endl;
+        }   
+    }
 }

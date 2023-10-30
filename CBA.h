@@ -13,4 +13,6 @@ public:
     void Expand(Tree &T, int c, vector <int> path);
 
     int get_sum(Graph &G, vector <int> &M, int v,int D);
+
+    void read_hbll(string filepre);
 };
