@@ -1,5 +1,8 @@
 #include "CBA.h"
+#include "Hub-Labeling/global.h"
+#include <array>
 #include <cstdio>
+#include <queue>
 #include <string>
 
 
@@ -28,7 +31,7 @@ void CBA::Expand(Tree &T, int c, vector <int> path)
     }
 }
 
-//姑且认为 K 是点集的集合
+//姑且认为 K 是点集的集合, O(n kglog)
 pair <vector <int>, int> CBA::OPT_MC(Graph &G, vector <vector <int> > &K, int D)
 {
     int n = G.n;
@@ -76,7 +79,7 @@ pair <vector <int>, int> CBA::OPT_MC(Graph &G, vector <vector <int> > &K, int D)
 
     return make_pair(M, c);
 }
-
+//qglog
 int CBA::get_sum(Graph &G, vector <int> &M, int v, int D)
 {
     int sum = 0;
@@ -87,7 +90,7 @@ int CBA::get_sum(Graph &G, vector <int> &M, int v, int D)
     }
     return sum;
 }
-
+// O(kglog)
 vector <int> CBA::MaxM(Graph &G, vector <vector <int> > &K, int D, int v)
 {
     //fprintf(stderr, "In MaxM: v is %d\n", v);
@@ -115,13 +118,17 @@ vector <int> CBA::MaxM(Graph &G, vector <vector <int> > &K, int D, int v)
 
     return M;
 }
-
+//点数上界 qD O((qD)^3glog) +  O(n kglog)
 Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
 {
     //hbll.build_hbll(G);
+    start_time = get_now_time();
 
-    auto [M, c] = OPT_MC(G, K, D);
-    
+    //auto [M, c] = OPT_MC(G, K, D);
+    auto [M, c] = Pruned_OPT_MC(G, K, D);
+
+
+    after_optmc_time =get_now_time();
     // cerr << "OPT_MC ok" << endl;
     // fprintf(stderr, "Initial M:\n");
     // for(auto x: M) fprintf(stderr, "%d ", x);
@@ -180,6 +187,7 @@ Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
         // ++d_ct;
         // cerr << "the " << d_ct << "add is ok" << endl;
     }
+    end_time = get_now_time();
     return T;
 }
 
@@ -215,4 +223,85 @@ void CBA::read_hbll(string filepre)
                 cerr << "invalid hbll input" << endl;
         }   
     }
+
+    aver_l = hbll.Average_L();
+}
+
+int CBA::getpri(vector <vector <int> > &K, int v, int h, int D)
+{
+    int ret = 0;
+    for(auto Ki: K)
+    {
+        int flg = 0;
+        for(auto k: Ki)
+            if(h + hbll.GET_UD(k, v) <= D)
+            {
+                flg = 1;
+                break;
+            }
+        ret += flg;
+    }
+    return ret;
+}
+
+pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K, int D)
+{
+    int n = G.n;
+    vector <int> checked(n+1), mhp(n+1, inf);
+    priority_queue<qnode> Q;
+    
+    set <int> inter;
+    for(auto Ki: K) for(auto k: Ki)
+        inter.insert(k);
+
+    for(auto u: inter)
+    {
+        Q.push(qnode(u, 0, getpri(K, u, 0, D)));
+        mhp[u] = 0;
+    }
+
+    vector <int> M;
+    int c = 0;
+
+    while(!Q.empty())
+    {
+        auto qnow = Q.top();
+        Q.pop();
+        int v = qnow.v, h = qnow.h, priv = qnow.priv;
+        int Ms = M.size();
+        if(priv < Ms) break;
+        if(priv == Ms)
+        {
+            int mi = inf;
+            for(auto Ki: K)
+            {
+                for(auto k: Ki)
+                    mi = min(mi, hbll.GET_WD(v, k, D/2));
+            }
+            if(mi >= get_sum(G, M, c, D)/Ms)
+                continue;
+        }
+        if(!checked[v])
+        {
+            vector <int> Mv = MaxM(G, K, D, v);
+            checked[v] = true;
+            if(Mv.size() > M.size() || (Mv.size() == M.size() && get_sum(G, Mv, v, D) < get_sum(G, M, c, D)))
+            {
+                M = Mv;
+                c = v;
+            }
+        }
+        if(h < D/2)
+        {
+            for(auto [nxt, w]: G.ed[v])
+            {
+                if(h + 1 < mhp[nxt])
+                {
+                    Q.push(qnode(nxt, h + 1, getpri(K, nxt, h + 1, D)));
+                    mhp[nxt] = h + 1;
+                }
+            }
+        }
+    }
+    return make_pair(M, c);
 }

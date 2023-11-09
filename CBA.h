@@ -4,9 +4,24 @@ class CBA
 {
 public:
     HBLL hbll;
+    double start_time, after_optmc_time, end_time, aver_l;
+    struct qnode
+    {
+        int v, h, priv;
+        qnode(){v = h = priv = 0;}
+        qnode(int V, int H, int Priv): v(V), h(H), priv(Priv) {}
+        bool friend operator <(qnode a, qnode b)
+        {
+            return a.priv < b.priv;
+        }
+    };
     Tree Go_CBA(Graph G, vector <vector <int> > K, int D);
 
     pair <vector <int>, int> OPT_MC(Graph &G, vector <vector <int> > &K, int D);
+
+    int getpri(vector <vector <int> > &K, int v, int h, int D);
+
+    pair <vector <int>, int> Pruned_OPT_MC(Graph &G, vector <vector <int> > &K, int D);
 
     vector <int> MaxM(Graph &G, vector <vector <int> > &K, int D, int v);
 

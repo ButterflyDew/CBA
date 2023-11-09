@@ -1,0 +1,3 @@
+D is 2
+The point are: 557 39922 
+The edges are: [39922 557]

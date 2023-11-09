@@ -1,0 +1,4 @@
+D is 2
+The point are: 796 1194 7444 
+The edges are: [796 1194]
+[796 7444]

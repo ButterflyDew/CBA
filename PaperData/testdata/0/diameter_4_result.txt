@@ -1,0 +1,4 @@
+D is 4
+The point are: 3 5 9 
+The edges are: [3 5]
+[5 9]

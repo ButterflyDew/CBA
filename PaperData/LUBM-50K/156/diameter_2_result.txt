@@ -1,0 +1,4 @@
+D is 2
+The point are: 406 5081 12641 
+The edges are: [406 5081]
+[406 12641]

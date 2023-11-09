@@ -1,0 +1,3 @@
+D is 2
+The point are: 16694 
+The edges are: 

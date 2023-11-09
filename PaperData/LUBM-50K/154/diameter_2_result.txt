@@ -1,0 +1,4 @@
+D is 2
+The point are: 58 10486 12260 
+The edges are: [58 10486]
+[58 12260]

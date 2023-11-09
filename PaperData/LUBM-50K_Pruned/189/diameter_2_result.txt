@@ -1,0 +1,4 @@
+D is 2
+The point are: 100 46804 52590 
+The edges are: [100 46804]
+[100 52590]

@@ -1,0 +1,4 @@
+D is 2
+The point are: 562 15213 33922 
+The edges are: [562 15213]
+[562 33922]

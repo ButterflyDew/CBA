@@ -1,0 +1,4 @@
+D is 2
+The point are: 1022 13420 28178 
+The edges are: [13420 1022]
+[13420 28178]

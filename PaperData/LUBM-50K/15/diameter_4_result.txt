@@ -1,0 +1,3 @@
+D is 4
+The point are: 34723 
+The edges are: 

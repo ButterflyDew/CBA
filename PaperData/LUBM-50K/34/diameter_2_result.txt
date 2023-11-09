@@ -1,0 +1,3 @@
+D is 2
+The point are: 34105 
+The edges are: 
