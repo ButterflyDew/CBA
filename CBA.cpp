@@ -229,24 +229,74 @@ void CBA::read_hbll(string filepre)
 
 int CBA::getpri(vector <vector <int> > &K, int v, int h, int D)
 {
-    int ret = 0;
+    int ret = 0, curid = -1;
     for(auto Ki: K)
     {
-        int flg = 0;
+        ++curid;
+        if(vq[curid][v])
+        {
+            if(h + disq[curid][v] <= D)
+                ++ret;
+            continue;
+        }
+
+        int mi = inf;
         for(auto k: Ki)
-            if(h + hbll.GET_UD(k, v) <= D)
-            {
-                flg = 1;
-                break;
-            }
-        ret += flg;
+            mi = min(mi, hbll.GET_UD(k, v));
+        vq[curid][v] = 1;
+        disq[curid][v] = mi;
+
+        if(h + mi <= D)
+            ++ret;
     }
     return ret;
+}
+
+pair <vector <int>, int> CBA::Pruned_MaxM(Graph &G, vector <vector <int> > &K, int D, int v)
+{
+    //fprintf(stderr, "In MaxM: v is %d\n", v);
+    vector <int> M;
+    int sum = 0, curid = -1;
+    for(auto Ki: K)
+    {
+        ++curid;
+        if(vq[curid][v]&&disq[curid][v]>D/2) continue;
+        int u, mi = inf;
+        for(auto k: Ki)
+        {
+            int wd = hbll.GET_WD(v, k, D/2);
+            if(wd < mi)
+            {
+                mi = wd;
+                u = k;
+            }
+        }
+        if(mi != inf)
+        {
+            sum += mi;
+            if(sum > inf) sum = inf;
+            M.push_back(u);
+        }    
+    }
+
+    // fprintf(stderr, "In MaxM: M is:\n");
+    // fprintf(stderr, "sum is %d\n", sum);
+    // fprintf(stderr, "rt is %d\n", v);
+    // for(auto x:M) 
+    //     fprintf(stderr, "%d ", x);
+    // fprintf(stderr, "\n\n");
+
+    return make_pair(M, sum);
 }
 
 pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K, int D)
 {
     int n = G.n;
+    disq.resize(K.size(), vector<int>(n+1, 0));
+    vq.resize(K.size(), vector<bool>(n+1, false));
+    miq.resize(n+1, 0);
+    vmq.resize(n+1, false);
+
     vector <int> checked(n+1), mhp(n+1, inf);
     priority_queue<qnode> Q;
     
@@ -261,6 +311,7 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
     }
 
     vector <int> M;
+    int Msum = 0;
     int c = 0;
 
     while(!Q.empty())
@@ -272,23 +323,37 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
         if(priv < Ms) break;
         if(priv == Ms)
         {
+            // v 为根的最小距离，在 D/2 范围内
             int mi = inf;
-            for(auto Ki: K)
+            if(vmq[v])
             {
-                for(auto k: Ki)
-                    mi = min(mi, hbll.GET_WD(v, k, D/2));
+                mi = miq[v];
             }
-            if(mi >= get_sum(G, M, c, D)/Ms)
+            else
+            {
+                for(auto Ki: K)
+                {
+                    for(auto k: Ki)
+                        mi = min(mi, hbll.GET_WD(v, k, D/2));
+                }
+                vmq[v] = true;
+                miq[v] = mi;
+            }
+            if(mi >= Msum/Ms)
                 continue;
         }
         if(!checked[v])
         {
-            vector <int> Mv = MaxM(G, K, D, v);
+            vector <int> Mv;
+            int sum;
+            tie(Mv, sum) = Pruned_MaxM(G, K, D, v);
             checked[v] = true;
-            if(Mv.size() > M.size() || (Mv.size() == M.size() && get_sum(G, Mv, v, D) < get_sum(G, M, c, D)))
+            if(Mv.size() > M.size() || (Mv.size() == M.size() && sum < Msum) )
+            //&& get_sum(G, Mv, v, D) < get_sum(G, M, c, D)))
             {
                 M = Mv;
                 c = v;
+                Msum = sum;
             }
         }
         if(h < D/2)
@@ -303,5 +368,9 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
             }
         }
     }
+
+    // fprintf(stderr, "ret is :%lu %d\n", M.size(), c);
+    // for(auto x: M) fprintf(stderr, "%d ", x);
+    // fprintf(stderr, "\n");
     return make_pair(M, c);
 }

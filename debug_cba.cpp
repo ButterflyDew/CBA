@@ -58,7 +58,7 @@ void Print_time(string filepre, int qid, int siz_n, int siz_q, double aver_l, ve
 }
 
 
-string fordername = "/LUBM-50K_Pruned";
+string fordername = "/LUBM-50K_P";
 //string fordername = "/testdata";
 void go_cba()
 {
@@ -97,11 +97,14 @@ void go_cba()
         double aver_l;
         for(int D = 2; D <= 6; D += 2)
         {
+            cba.hbll.clearcnt();
+            //cba.hbll.cntud = cba.hbll.cntwd = 0;
             Tree T = cba.Go_CBA(G, Query, D);
             t_optmc.push_back(cba.after_optmc_time - cba.start_time);
             t_loop.push_back(cba.end_time - cba.after_optmc_time);
             T.Print_to_file(filepre, qid, D);
             aver_l = cba.aver_l;
+            cba.hbll.printcnt();
             fprintf(stderr, "D = %d done!\n", D);
         }
         Print_time(filepre, qid, siz_n, siz_q, aver_l, t_optmc, t_loop);

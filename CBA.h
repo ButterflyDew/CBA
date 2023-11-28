@@ -1,9 +1,14 @@
 #include "Hub-Labeling/global.h"
 #include "Hub-Labeling/hbll.h"
+#include <vector>
 class CBA
 {
 public:
     HBLL hbll;
+    vector <vector <int> > disq;
+    vector <vector <bool> > vq;
+    vector <int> miq;
+    vector <bool> vmq;
     double start_time, after_optmc_time, end_time, aver_l;
     struct qnode
     {
@@ -15,6 +20,14 @@ public:
             return a.priv < b.priv;
         }
     };
+    // struct AddiInfo
+    // {
+    //     int sum, mi;
+    //     AddiInfo(){sum = 0, mi = inf;}
+    //     AddiInfo(int Sum,int Mi): sum(Sum), mi(Mi) {}
+    // };
+    pair <vector <int>, int> Pruned_MaxM(Graph &G, vector <vector <int> > &K, int D, int v);
+
     Tree Go_CBA(Graph G, vector <vector <int> > K, int D);
 
     pair <vector <int>, int> OPT_MC(Graph &G, vector <vector <int> > &K, int D);
