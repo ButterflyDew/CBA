@@ -57,6 +57,23 @@ void Print_time(string filepre, int qid, int siz_n, int siz_q, double aver_l, ve
     outputFile.close();
 }
 
+void testv()
+{
+    double st = get_now_time();
+    int n = cba.hbll.n, ct = 0;
+    for(int i = 1; i <= 1000000; i++)
+    {
+        int u = generateRandomNumber(1, n);
+        int v = generateRandomNumber(1, n);
+        int h = generateRandomNumber(1, 10);
+        ct += cba.hbll.L[u].size();
+        ct += cba.hbll.L[v].size();
+        cba.hbll.GET_WD(u, v, h);
+    }
+    double ed = get_now_time();
+    fprintf(stderr, "%.0lf ms si: %d\n", ed - st, ct);
+    exit(0);
+}
 
 string fordername = "/LUBM-50K_P";
 //string fordername = "/testdata";
@@ -81,6 +98,7 @@ void go_cba()
     int qid = 0;
 
     //double aver = hbll.Average_L();
+    testv();
 
     for(auto Query: Queryset)
     {

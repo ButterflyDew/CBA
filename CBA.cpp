@@ -223,7 +223,7 @@ void CBA::read_hbll(string filepre)
                 cerr << "invalid hbll input" << endl;
         }   
     }
-
+    hbll.rearrange();
     aver_l = hbll.Average_L();
 }
 
@@ -291,6 +291,7 @@ pair <vector <int>, int> CBA::Pruned_MaxM(Graph &G, vector <vector <int> > &K, i
 
 pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K, int D)
 {
+    hbll.clearbuc();
     int n = G.n;
     disq.resize(K.size(), vector<int>(n+1, 0));
     vq.resize(K.size(), vector<bool>(n+1, false));
@@ -314,8 +315,10 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
     int Msum = 0;
     int c = 0;
 
+    int qpcnt = 0;
     while(!Q.empty())
     {
+        ++qpcnt;
         auto qnow = Q.top();
         Q.pop();
         int v = qnow.v, h = qnow.h, priv = qnow.priv;
@@ -368,7 +371,7 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
             }
         }
     }
-
+    fprintf(stderr, "In omtmc, pqcnt: %d\n", qpcnt);
     // fprintf(stderr, "ret is :%lu %d\n", M.size(), c);
     // for(auto x: M) fprintf(stderr, "%d ", x);
     // fprintf(stderr, "\n");
