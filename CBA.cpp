@@ -118,15 +118,33 @@ vector <int> CBA::MaxM(Graph &G, vector <vector <int> > &K, int D, int v)
 
     return M;
 }
+
+void CBA::build_qhbll(vector <vector <int> > &K, int D)
+{
+    qhbll.clear();
+    qhbll.resize(K.size() + 1);
+    vector <int> fq;
+    int j = 0;
+    for(auto ki: K)
+    {
+        qhbll[++j].clear();
+        qhbll[j].insert_qry(ki, hbll.L, D);
+        for(auto k: ki) fq.push_back(k);
+    }
+    qhbll[0].insert_qry(fq, hbll.L, D);
+}
+
 //点数上界 qD O((qD)^3glog) +  O(n kglog)
 Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
 {
     //hbll.build_hbll(G);
+    build_qhbll(K, D);
+
     start_time = get_now_time();
 
     //auto [M, c] = OPT_MC(G, K, D);
     auto [M, c] = Pruned_OPT_MC(G, K, D);
-
+    revM = M;
 
     after_optmc_time =get_now_time();
     // cerr << "OPT_MC ok" << endl;
@@ -188,6 +206,9 @@ Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
         // cerr << "the " << d_ct << "add is ok" << endl;
     }
     end_time = get_now_time();
+    T.gval = G.gval;
+    revw = T.get_sumvalue();
+
     return T;
 }
 
@@ -200,7 +221,7 @@ void CBA::read_hbll(string filepre)
         cerr << "Can't open file: " <<  filepre + "/hbll.txt" << endl;
 
     string line;
-    hbll.L.push_back(vector <HBLL::Triple> ());
+    hbll.L.push_back(vector <Triple> ());
     hbll.prew.push_back(vector <int> ());
 
     while (getline(inputFile, line)) 
@@ -208,7 +229,7 @@ void CBA::read_hbll(string filepre)
         istringstream lines(line);
         string lin;
         ++ hbll.n;
-        hbll.L.push_back(vector <HBLL::Triple> ());
+        hbll.L.push_back(vector <Triple> ());
         hbll.prew.push_back(vector <int> ());
         while(getline(lines, lin, ','))
         {
@@ -216,7 +237,7 @@ void CBA::read_hbll(string filepre)
             auto num = extractIntegers(lin);
             if(num.size() == 4)
             {
-                hbll.L[hbll.n].push_back(HBLL::Triple(num[0], num[1], num[2]));
+                hbll.L[hbll.n].push_back(Triple(num[0], num[1], num[2]));
                 hbll.prew[hbll.n].push_back(num[3]);
             }
             else 
@@ -240,9 +261,12 @@ int CBA::getpri(vector <vector <int> > &K, int v, int h, int D)
             continue;
         }
 
-        int mi = inf;
-        for(auto k: Ki)
-            mi = min(mi, hbll.GET_UD(k, v));
+        int mi = qhbll[curid + 1].GET_UD(hbll.L[v]);
+        
+        // int mi = inf;
+        // for(auto k: Ki)
+        //     mi = min(mi, hbll.GET_UD(k, v));
+        
         vq[curid][v] = 1;
         disq[curid][v] = mi;
 
@@ -262,15 +286,22 @@ pair <vector <int>, int> CBA::Pruned_MaxM(Graph &G, vector <vector <int> > &K, i
         ++curid;
         if(vq[curid][v]&&disq[curid][v]>D/2) continue;
         int u, mi = inf;
-        for(auto k: Ki)
-        {
-            int wd = hbll.GET_WD(v, k, D/2);
-            if(wd < mi)
-            {
-                mi = wd;
-                u = k;
-            }
-        }
+        tie(u, mi) = qhbll[curid + 1].GET_WD(D/2, hbll.L[v]);
+
+        // int u, mi = inf;
+        // for(auto k: Ki)
+        // {
+        //     int wd = hbll.GET_WD(v, k, D/2);
+        //     if(wd < mi)
+        //     {
+        //         mi = wd;
+        //         u = k;
+        //     }
+        // }
+        // if(v == 49809)
+        // {
+        //     cerr << mi << " " << u << endl;
+        // }
         if(mi != inf)
         {
             sum += mi;
@@ -293,6 +324,7 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
 {
     hbll.clearbuc();
     int n = G.n;
+    disq.clear(), vq.clear(), miq.clear(), vmq.clear();
     disq.resize(K.size(), vector<int>(n+1, 0));
     vq.resize(K.size(), vector<bool>(n+1, false));
     miq.resize(n+1, 0);
@@ -308,6 +340,7 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
     for(auto u: inter)
     {
         Q.push(qnode(u, 0, getpri(K, u, 0, D)));
+        //fprintf(stderr, "u: %d pri: %d\n", u, getpri(K, u, 0, D));
         mhp[u] = 0;
     }
 
@@ -334,15 +367,17 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
             }
             else
             {
-                for(auto Ki: K)
-                {
-                    for(auto k: Ki)
-                        mi = min(mi, hbll.GET_WD(v, k, D/2));
-                }
+                mi = qhbll[0].GET_WD(D/2, hbll.L[v]).second;
+                
+                // for(auto Ki: K)
+                // {
+                //     for(auto k: Ki)
+                //         mi = min(mi, hbll.GET_WD(v, k, D/2));
+                // }
                 vmq[v] = true;
                 miq[v] = mi;
             }
-            if(mi >= Msum/Ms)
+            if(1ll*mi*Ms >= Msum)
                 continue;
         }
         if(!checked[v])
@@ -371,7 +406,7 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
             }
         }
     }
-    fprintf(stderr, "In omtmc, pqcnt: %d\n", qpcnt);
+    // fprintf(stderr, "In omtmc, pqcnt: %d\n", qpcnt);
     // fprintf(stderr, "ret is :%lu %d\n", M.size(), c);
     // for(auto x: M) fprintf(stderr, "%d ", x);
     // fprintf(stderr, "\n");

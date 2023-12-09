@@ -1,15 +1,21 @@
 #include "Hub-Labeling/global.h"
 #include "Hub-Labeling/hbll.h"
+#include "qhbll.h"
 #include <vector>
 class CBA
 {
 public:
     HBLL hbll;
+    vector <qHBLL> qhbll;
     vector <vector <int> > disq;
     vector <vector <bool> > vq;
     vector <int> miq;
     vector <bool> vmq;
     double start_time, after_optmc_time, end_time, aver_l;
+    
+    vector <int> revM;
+    double revw;
+
     struct qnode
     {
         int v, h, priv;
@@ -43,4 +49,6 @@ public:
     int get_sum(Graph &G, vector <int> &M, int v,int D);
 
     void read_hbll(string filepre);
+
+    void build_qhbll(vector <vector <int> > &K, int D);
 };
