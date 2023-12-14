@@ -1,15 +1,21 @@
 #include "Hub-Labeling/global.h"
 #include "Hub-Labeling/hbll.h"
+#include "qhbll.h"
 #include <vector>
 class CBA
 {
 public:
     HBLL hbll;
+    vector <qHBLL> qhbll;
     vector <vector <int> > disq;
     vector <vector <bool> > vq;
-    vector <int> miq;
+    vector <double> miq;
     vector <bool> vmq;
     double start_time, after_optmc_time, end_time, aver_l;
+    
+    vector <int> revM;
+    double revw;
+
     struct qnode
     {
         int v, h, priv;
@@ -26,7 +32,7 @@ public:
     //     AddiInfo(){sum = 0, mi = inf;}
     //     AddiInfo(int Sum,int Mi): sum(Sum), mi(Mi) {}
     // };
-    pair <vector <int>, int> Pruned_MaxM(Graph &G, vector <vector <int> > &K, int D, int v);
+    pair <vector <int>, double> Pruned_MaxM(Graph &G, vector <vector <int> > &K, int D, int v);
 
     Tree Go_CBA(Graph G, vector <vector <int> > K, int D);
 
@@ -40,7 +46,9 @@ public:
 
     void Expand(Tree &T, int c, vector <int> path);
 
-    int get_sum(Graph &G, vector <int> &M, int v,int D);
+    double get_sum(Graph &G, vector <int> &M, int v,int D);
 
     void read_hbll(string filepre);
+
+    void build_qhbll(vector <vector <int> > &K, int D);
 };

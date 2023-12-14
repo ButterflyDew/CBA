@@ -57,6 +57,28 @@ void Print_time(string filepre, int qid, int siz_n, int siz_q, double aver_l, ve
     outputFile.close();
 }
 
+void Print_time_all(string filepre, int qid, vector <double> t_optmc, vector <double> t_loop)
+{
+    ios_base::openmode mode = ios::app;
+    if (qid == 0) 
+        mode = ios::trunc;
+
+    ofstream outputFile(filepre + "/time_result_all.txt", mode);
+    if (!outputFile.is_open()) {
+        cerr << "Error: Couldn't open the file." << endl;
+        return;
+    }
+    
+    outputFile << "------------------query " << qid << "------------------" << endl;
+    for(int i = 0; i < 3; i++)
+    {
+        double le = t_optmc[i], ri = t_loop[i];
+        outputFile << "diameter=" << (i+1)*2 << "   time: " << le + ri << " ms" << endl;
+    }
+
+    outputFile.close();
+}
+
 void testv()
 {
     double st = get_now_time();
@@ -75,13 +97,13 @@ void testv()
     exit(0);
 }
 
-string fordername = "/LUBM-50K_P";
-//string fordername = "/testdata";
+string fordername = "/LUBM-50K_Weight";
+//string fordername = "/testdata-d";
 void go_cba()
 {
     filepre = "PaperData" + fordername;
-    G.read(filepre+"/graph.txt", 0);
-
+    //G.read(filepre+"/graph.txt", 0);
+    G.read(filepre+"/Weightgraph.txt", 0);
     if(!filesystem::exists(filepre + "/hbll.txt"))
     {
         HBLL hbll;
@@ -98,14 +120,15 @@ void go_cba()
     int qid = 0;
 
     //double aver = hbll.Average_L();
-    testv();
+    //testv();
 
     for(auto Query: Queryset)
     {
-        if(qid <= 135)
+        if(qid == 1)
         {
             ++qid;
-            continue;
+            break;
+            //continue;
         }
         fprintf(stderr, "Start go %d\n", qid);
         int siz_n = 0, siz_q = 0;
@@ -120,13 +143,15 @@ void go_cba()
             Tree T = cba.Go_CBA(G, Query, D);
             t_optmc.push_back(cba.after_optmc_time - cba.start_time);
             t_loop.push_back(cba.end_time - cba.after_optmc_time);
-            T.Print_to_file(filepre, qid, D);
+            T.Print_to_file(filepre, qid, D, cba.revM);
             aver_l = cba.aver_l;
             cba.hbll.printcnt();
             fprintf(stderr, "D = %d done!\n", D);
         }
         Print_time(filepre, qid, siz_n, siz_q, aver_l, t_optmc, t_loop);
+        Print_time_all(filepre, qid, t_optmc, t_loop);
         ++qid;
+
         //break;
     }    
 }
