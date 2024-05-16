@@ -1,3 +1,0 @@
-D is 6
-The point are: 37069 
-The edges are: 

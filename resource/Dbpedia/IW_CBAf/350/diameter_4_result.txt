@@ -1,0 +1,8 @@
+D is 4
+The point are: 780 2708592 3979278 3979280 
+The edges are: [780 2708592]
+[780 3979278]
+[3979278 3979280]
+Query size is: 3
+2708592 780 3979280 
+The sum weight of Tree is: 36.0222

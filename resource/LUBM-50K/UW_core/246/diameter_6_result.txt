@@ -1,0 +1,10 @@
+D is 6
+The point are: 16 17 68 10367 49317 51208 
+The edges are: [16 17]
+[17 68]
+[17 10367]
+[68 49317]
+[68 51208]
+Query size is: 4
+49317 51208 10367 16 
+The sum weight of Tree is: 5

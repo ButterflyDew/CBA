@@ -1,0 +1,8 @@
+D is 2
+The point are: 411 11055 11362 30150 
+The edges are: [411 11362]
+[411 11055]
+[411 30150]
+Query size is: 4
+411 11055 11362 30150 
+The sum weight of Tree is: 28.3499

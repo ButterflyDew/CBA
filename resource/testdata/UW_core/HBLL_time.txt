@@ -1,0 +1,3 @@
+Dijk time is: 0ms, 0s
+Build label time is: 2ms, 0.002s
+The sum of label is: 43

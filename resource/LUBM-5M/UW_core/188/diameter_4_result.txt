@@ -1,0 +1,9 @@
+D is 4
+The point are: 1842 2041 8599 2253277 3999395 
+The edges are: [8599 1842]
+[8599 2041]
+[1842 3999395]
+[2041 2253277]
+Query size is: 3
+3999395 3999395 2253277 
+The sum weight of Tree is: 4

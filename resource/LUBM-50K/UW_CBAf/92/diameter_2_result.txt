@@ -1,0 +1,9 @@
+D is 2
+The point are: 321 14572 30621 31800 54694 
+The edges are: [321 14572]
+[321 30621]
+[321 31800]
+[321 54694]
+Query size is: 4
+54694 14572 30621 31800 
+The sum weight of Tree is: 4

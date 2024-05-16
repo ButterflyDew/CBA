@@ -1,3 +1,0 @@
-D is 2
-The point are: 43900 
-The edges are: 

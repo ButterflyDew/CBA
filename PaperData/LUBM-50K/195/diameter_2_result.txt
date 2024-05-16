@@ -1,4 +1,0 @@
-D is 2
-The point are: 58 12800 21247 
-The edges are: [58 12800]
-[58 21247]

@@ -1,0 +1,9 @@
+D is 2
+The point are: 609 4421 177397 252558 281338 
+The edges are: [4421 281338]
+[4421 177397]
+[4421 252558]
+[4421 609]
+Query size is: 4
+281338 177397 252558 609 
+The sum weight of Tree is: 4

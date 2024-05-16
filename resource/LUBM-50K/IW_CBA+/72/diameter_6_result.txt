@@ -1,0 +1,9 @@
+D is 6
+The point are: 2400 3770 15764 20241 32616 
+The edges are: [2400 20241]
+[2400 3770]
+[2400 15764]
+[2400 32616]
+Query size is: 4
+3770 20241 15764 32616 
+The sum weight of Tree is: 34.5599

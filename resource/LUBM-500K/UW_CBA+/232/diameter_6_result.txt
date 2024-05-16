@@ -1,0 +1,9 @@
+D is 6
+The point are: 1013 152370 283343 446487 530698 
+The edges are: [1013 152370]
+[1013 283343]
+[1013 446487]
+[1013 530698]
+Query size is: 4
+283343 152370 446487 530698 
+The sum weight of Tree is: 4

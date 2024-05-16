@@ -1,4 +1,0 @@
-D is 2
-The point are: 983 12427 54280 
-The edges are: [983 12427]
-[983 54280]

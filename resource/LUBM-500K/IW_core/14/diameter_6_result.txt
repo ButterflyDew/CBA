@@ -1,0 +1,8 @@
+D is 6
+The point are: 855 5786 26784 140868 
+The edges are: [855 5786]
+[5786 26784]
+[26784 140868]
+Query size is: 2
+855 140868 
+The sum weight of Tree is: 30.4662

@@ -1,0 +1,9 @@
+D is 6
+The point are: 842 5232 9667 12370 43752 
+The edges are: [842 5232]
+[842 9667]
+[842 12370]
+[842 43752]
+Query size is: 4
+43752 5232 12370 9667 
+The sum weight of Tree is: 4

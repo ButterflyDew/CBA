@@ -1,0 +1,12 @@
+D is 6
+The point are: 1 2 3 4 7 8 11 12 
+The edges are: [2 1]
+[2 4]
+[1 3]
+[4 7]
+[4 8]
+[7 11]
+[7 12]
+Query size is: 5
+2 3 11 8 12 
+The sum weight of Tree is: 7

@@ -1,0 +1,8 @@
+D is 4
+The point are: 3121 415604 428930 450658 
+The edges are: [3121 415604]
+[3121 428930]
+[3121 450658]
+Query size is: 4
+450658 3121 415604 428930 
+The sum weight of Tree is: 33.9156

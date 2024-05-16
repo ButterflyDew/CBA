@@ -1,0 +1,1752 @@
+------------------query 0------------------
+diameter=2   time: 40 ms
+diameter=4   time: 27 ms
+diameter=6   time: 1147 ms
+------------------query 1------------------
+diameter=2   time: 22 ms
+diameter=4   time: 20 ms
+diameter=6   time: 103 ms
+------------------query 2------------------
+diameter=2   time: 20 ms
+diameter=4   time: 107 ms
+diameter=6   time: 44 ms
+------------------query 3------------------
+diameter=2   time: 45 ms
+diameter=4   time: 63 ms
+diameter=6   time: 671 ms
+------------------query 4------------------
+diameter=2   time: 58 ms
+diameter=4   time: 598 ms
+diameter=6   time: 425 ms
+------------------query 5------------------
+diameter=2   time: 34 ms
+diameter=4   time: 67 ms
+diameter=6   time: 932 ms
+------------------query 6------------------
+diameter=2   time: 17 ms
+diameter=4   time: 128 ms
+diameter=6   time: 79 ms
+------------------query 7------------------
+diameter=2   time: 50 ms
+diameter=4   time: 58 ms
+diameter=6   time: 149 ms
+------------------query 8------------------
+diameter=2   time: 40 ms
+diameter=4   time: 47 ms
+diameter=6   time: 62 ms
+------------------query 9------------------
+diameter=2   time: 38 ms
+diameter=4   time: 61 ms
+diameter=6   time: 83 ms
+------------------query 10------------------
+diameter=2   time: 33 ms
+diameter=4   time: 110 ms
+diameter=6   time: 188 ms
+------------------query 11------------------
+diameter=2   time: 36 ms
+diameter=4   time: 68 ms
+diameter=6   time: 91 ms
+------------------query 12------------------
+diameter=2   time: 34 ms
+diameter=4   time: 431 ms
+diameter=6   time: 1285 ms
+------------------query 13------------------
+diameter=2   time: 27 ms
+diameter=4   time: 29 ms
+diameter=6   time: 1151 ms
+------------------query 14------------------
+diameter=2   time: 24 ms
+diameter=4   time: 63 ms
+diameter=6   time: 869 ms
+------------------query 15------------------
+diameter=2   time: 29 ms
+diameter=4   time: 21 ms
+diameter=6   time: 41 ms
+------------------query 16------------------
+diameter=2   time: 16 ms
+diameter=4   time: 19 ms
+diameter=6   time: 186 ms
+------------------query 17------------------
+diameter=2   time: 11 ms
+diameter=4   time: 132 ms
+diameter=6   time: 308 ms
+------------------query 18------------------
+diameter=2   time: 28 ms
+diameter=4   time: 27 ms
+diameter=6   time: 1711 ms
+------------------query 19------------------
+diameter=2   time: 31 ms
+diameter=4   time: 444 ms
+diameter=6   time: 515 ms
+------------------query 20------------------
+diameter=2   time: 11 ms
+diameter=4   time: 20 ms
+diameter=6   time: 46 ms
+------------------query 21------------------
+diameter=2   time: 30 ms
+diameter=4   time: 24 ms
+diameter=6   time: 21 ms
+------------------query 22------------------
+diameter=2   time: 23 ms
+diameter=4   time: 25 ms
+diameter=6   time: 48 ms
+------------------query 23------------------
+diameter=2   time: 28 ms
+diameter=4   time: 53 ms
+diameter=6   time: 53 ms
+------------------query 24------------------
+diameter=2   time: 23 ms
+diameter=4   time: 41 ms
+diameter=6   time: 292 ms
+------------------query 25------------------
+diameter=2   time: 28 ms
+diameter=4   time: 1193 ms
+diameter=6   time: 1271 ms
+------------------query 26------------------
+diameter=2   time: 12 ms
+diameter=4   time: 71 ms
+diameter=6   time: 523 ms
+------------------query 27------------------
+diameter=2   time: 14 ms
+diameter=4   time: 12 ms
+diameter=6   time: 361 ms
+------------------query 28------------------
+diameter=2   time: 10 ms
+diameter=4   time: 10 ms
+diameter=6   time: 47 ms
+------------------query 29------------------
+diameter=2   time: 22 ms
+diameter=4   time: 20 ms
+diameter=6   time: 152 ms
+------------------query 30------------------
+diameter=2   time: 10 ms
+diameter=4   time: 15 ms
+diameter=6   time: 675 ms
+------------------query 31------------------
+diameter=2   time: 23 ms
+diameter=4   time: 33 ms
+diameter=6   time: 40 ms
+------------------query 32------------------
+diameter=2   time: 53 ms
+diameter=4   time: 200 ms
+diameter=6   time: 3420 ms
+------------------query 33------------------
+diameter=2   time: 39 ms
+diameter=4   time: 59 ms
+diameter=6   time: 982 ms
+------------------query 34------------------
+diameter=2   time: 22 ms
+diameter=4   time: 257 ms
+diameter=6   time: 2127 ms
+------------------query 35------------------
+diameter=2   time: 28 ms
+diameter=4   time: 52 ms
+diameter=6   time: 96 ms
+------------------query 36------------------
+diameter=2   time: 14 ms
+diameter=4   time: 32 ms
+diameter=6   time: 532 ms
+------------------query 37------------------
+diameter=2   time: 32 ms
+diameter=4   time: 35 ms
+diameter=6   time: 40 ms
+------------------query 38------------------
+diameter=2   time: 16 ms
+diameter=4   time: 46 ms
+diameter=6   time: 20 ms
+------------------query 39------------------
+diameter=2   time: 11 ms
+diameter=4   time: 30 ms
+diameter=6   time: 28 ms
+------------------query 40------------------
+diameter=2   time: 11 ms
+diameter=4   time: 11 ms
+diameter=6   time: 80 ms
+------------------query 41------------------
+diameter=2   time: 12 ms
+diameter=4   time: 19 ms
+diameter=6   time: 34 ms
+------------------query 42------------------
+diameter=2   time: 44 ms
+diameter=4   time: 183 ms
+diameter=6   time: 2822 ms
+------------------query 43------------------
+diameter=2   time: 32 ms
+diameter=4   time: 31 ms
+diameter=6   time: 91 ms
+------------------query 44------------------
+diameter=2   time: 24 ms
+diameter=4   time: 25 ms
+diameter=6   time: 612 ms
+------------------query 45------------------
+diameter=2   time: 48 ms
+diameter=4   time: 117 ms
+diameter=6   time: 174 ms
+------------------query 46------------------
+diameter=2   time: 32 ms
+diameter=4   time: 46 ms
+diameter=6   time: 55 ms
+------------------query 47------------------
+diameter=2   time: 10 ms
+diameter=4   time: 10 ms
+diameter=6   time: 10 ms
+------------------query 48------------------
+diameter=2   time: 13 ms
+diameter=4   time: 42 ms
+diameter=6   time: 1305 ms
+------------------query 49------------------
+diameter=2   time: 38 ms
+diameter=4   time: 47 ms
+diameter=6   time: 66 ms
+------------------query 50------------------
+diameter=2   time: 25 ms
+diameter=4   time: 130 ms
+diameter=6   time: 5059 ms
+------------------query 51------------------
+diameter=2   time: 22 ms
+diameter=4   time: 1280 ms
+diameter=6   time: 4627 ms
+------------------query 52------------------
+diameter=2   time: 51 ms
+diameter=4   time: 1659 ms
+diameter=6   time: 5101 ms
+------------------query 53------------------
+diameter=2   time: 38 ms
+diameter=4   time: 932 ms
+diameter=6   time: 4605 ms
+------------------query 54------------------
+diameter=2   time: 47 ms
+diameter=4   time: 787 ms
+diameter=6   time: 261 ms
+------------------query 55------------------
+diameter=2   time: 21 ms
+diameter=4   time: 480 ms
+diameter=6   time: 2071 ms
+------------------query 56------------------
+diameter=2   time: 28 ms
+diameter=4   time: 151 ms
+diameter=6   time: 207 ms
+------------------query 57------------------
+diameter=2   time: 46 ms
+diameter=4   time: 3276 ms
+diameter=6   time: 16520 ms
+------------------query 58------------------
+diameter=2   time: 25 ms
+diameter=4   time: 55 ms
+diameter=6   time: 4154 ms
+------------------query 59------------------
+diameter=2   time: 28 ms
+diameter=4   time: 921 ms
+diameter=6   time: 8468 ms
+------------------query 60------------------
+diameter=2   time: 33 ms
+diameter=4   time: 576 ms
+diameter=6   time: 5198 ms
+------------------query 61------------------
+diameter=2   time: 22 ms
+diameter=4   time: 62 ms
+diameter=6   time: 144 ms
+------------------query 62------------------
+diameter=2   time: 34 ms
+diameter=4   time: 194 ms
+diameter=6   time: 15245 ms
+------------------query 63------------------
+diameter=2   time: 20 ms
+diameter=4   time: 256 ms
+diameter=6   time: 1904 ms
+------------------query 64------------------
+diameter=2   time: 32 ms
+diameter=4   time: 601 ms
+diameter=6   time: 83 ms
+------------------query 65------------------
+diameter=2   time: 32 ms
+diameter=4   time: 318 ms
+diameter=6   time: 4337 ms
+------------------query 66------------------
+diameter=2   time: 27 ms
+diameter=4   time: 49 ms
+diameter=6   time: 2409 ms
+------------------query 67------------------
+diameter=2   time: 19 ms
+diameter=4   time: 31 ms
+diameter=6   time: 451 ms
+------------------query 68------------------
+diameter=2   time: 40 ms
+diameter=4   time: 795 ms
+diameter=6   time: 5229 ms
+------------------query 69------------------
+diameter=2   time: 27 ms
+diameter=4   time: 95 ms
+diameter=6   time: 1790 ms
+------------------query 70------------------
+diameter=2   time: 36 ms
+diameter=4   time: 632 ms
+diameter=6   time: 441 ms
+------------------query 71------------------
+diameter=2   time: 18 ms
+diameter=4   time: 792 ms
+diameter=6   time: 581 ms
+------------------query 72------------------
+diameter=2   time: 13 ms
+diameter=4   time: 15 ms
+diameter=6   time: 16 ms
+------------------query 73------------------
+diameter=2   time: 48 ms
+diameter=4   time: 279 ms
+diameter=6   time: 645 ms
+------------------query 74------------------
+diameter=2   time: 43 ms
+diameter=4   time: 145 ms
+diameter=6   time: 277 ms
+------------------query 75------------------
+diameter=2   time: 33 ms
+diameter=4   time: 1085 ms
+diameter=6   time: 8828 ms
+------------------query 76------------------
+diameter=2   time: 27 ms
+diameter=4   time: 352 ms
+diameter=6   time: 3225 ms
+------------------query 77------------------
+diameter=2   time: 25 ms
+diameter=4   time: 718 ms
+diameter=6   time: 630 ms
+------------------query 78------------------
+diameter=2   time: 32 ms
+diameter=4   time: 72 ms
+diameter=6   time: 120 ms
+------------------query 79------------------
+diameter=2   time: 10 ms
+diameter=4   time: 25 ms
+diameter=6   time: 38 ms
+------------------query 80------------------
+diameter=2   time: 35 ms
+diameter=4   time: 547 ms
+diameter=6   time: 69 ms
+------------------query 81------------------
+diameter=2   time: 34 ms
+diameter=4   time: 127 ms
+diameter=6   time: 175 ms
+------------------query 82------------------
+diameter=2   time: 25 ms
+diameter=4   time: 70 ms
+diameter=6   time: 1881 ms
+------------------query 83------------------
+diameter=2   time: 26 ms
+diameter=4   time: 533 ms
+diameter=6   time: 2621 ms
+------------------query 84------------------
+diameter=2   time: 30 ms
+diameter=4   time: 170 ms
+diameter=6   time: 1952 ms
+------------------query 85------------------
+diameter=2   time: 31 ms
+diameter=4   time: 988 ms
+diameter=6   time: 286 ms
+------------------query 86------------------
+diameter=2   time: 27 ms
+diameter=4   time: 35 ms
+diameter=6   time: 348 ms
+------------------query 87------------------
+diameter=2   time: 42 ms
+diameter=4   time: 505 ms
+diameter=6   time: 2491 ms
+------------------query 88------------------
+diameter=2   time: 30 ms
+diameter=4   time: 100 ms
+diameter=6   time: 59 ms
+------------------query 89------------------
+diameter=2   time: 29 ms
+diameter=4   time: 46 ms
+diameter=6   time: 974 ms
+------------------query 90------------------
+diameter=2   time: 38 ms
+diameter=4   time: 48 ms
+diameter=6   time: 76 ms
+------------------query 91------------------
+diameter=2   time: 37 ms
+diameter=4   time: 32 ms
+diameter=6   time: 53 ms
+------------------query 92------------------
+diameter=2   time: 35 ms
+diameter=4   time: 458 ms
+diameter=6   time: 1051 ms
+------------------query 93------------------
+diameter=2   time: 52 ms
+diameter=4   time: 175 ms
+diameter=6   time: 340 ms
+------------------query 94------------------
+diameter=2   time: 32 ms
+diameter=4   time: 29 ms
+diameter=6   time: 958 ms
+------------------query 95------------------
+diameter=2   time: 26 ms
+diameter=4   time: 40 ms
+diameter=6   time: 91 ms
+------------------query 96------------------
+diameter=2   time: 10 ms
+diameter=4   time: 13 ms
+diameter=6   time: 148 ms
+------------------query 97------------------
+diameter=2   time: 34 ms
+diameter=4   time: 10 ms
+diameter=6   time: 21 ms
+------------------query 98------------------
+diameter=2   time: 67 ms
+diameter=4   time: 142 ms
+diameter=6   time: 312 ms
+------------------query 99------------------
+diameter=2   time: 33 ms
+diameter=4   time: 213 ms
+diameter=6   time: 624 ms
+------------------query 100------------------
+diameter=2   time: 22 ms
+diameter=4   time: 404 ms
+diameter=6   time: 333 ms
+------------------query 101------------------
+diameter=2   time: 11 ms
+diameter=4   time: 18 ms
+diameter=6   time: 1015 ms
+------------------query 102------------------
+diameter=2   time: 36 ms
+diameter=4   time: 73 ms
+diameter=6   time: 1098 ms
+------------------query 103------------------
+diameter=2   time: 23 ms
+diameter=4   time: 166 ms
+diameter=6   time: 1057 ms
+------------------query 104------------------
+diameter=2   time: 22 ms
+diameter=4   time: 55 ms
+diameter=6   time: 798 ms
+------------------query 105------------------
+diameter=2   time: 30 ms
+diameter=4   time: 152 ms
+diameter=6   time: 2346 ms
+------------------query 106------------------
+diameter=2   time: 26 ms
+diameter=4   time: 32 ms
+diameter=6   time: 5608 ms
+------------------query 107------------------
+diameter=2   time: 22 ms
+diameter=4   time: 182 ms
+diameter=6   time: 1256 ms
+------------------query 108------------------
+diameter=2   time: 45 ms
+diameter=4   time: 50 ms
+diameter=6   time: 5380 ms
+------------------query 109------------------
+diameter=2   time: 30 ms
+diameter=4   time: 226 ms
+diameter=6   time: 5704 ms
+------------------query 110------------------
+diameter=2   time: 24 ms
+diameter=4   time: 569 ms
+diameter=6   time: 4995 ms
+------------------query 111------------------
+diameter=2   time: 29 ms
+diameter=4   time: 430 ms
+diameter=6   time: 237 ms
+------------------query 112------------------
+diameter=2   time: 25 ms
+diameter=4   time: 282 ms
+diameter=6   time: 88 ms
+------------------query 113------------------
+diameter=2   time: 44 ms
+diameter=4   time: 1640 ms
+diameter=6   time: 1186 ms
+------------------query 114------------------
+diameter=2   time: 25 ms
+diameter=4   time: 270 ms
+diameter=6   time: 718 ms
+------------------query 115------------------
+diameter=2   time: 31 ms
+diameter=4   time: 717 ms
+diameter=6   time: 2022 ms
+------------------query 116------------------
+diameter=2   time: 34 ms
+diameter=4   time: 216 ms
+diameter=6   time: 599 ms
+------------------query 117------------------
+diameter=2   time: 35 ms
+diameter=4   time: 221 ms
+diameter=6   time: 176 ms
+------------------query 118------------------
+diameter=2   time: 27 ms
+diameter=4   time: 100 ms
+diameter=6   time: 94 ms
+------------------query 119------------------
+diameter=2   time: 37 ms
+diameter=4   time: 61 ms
+diameter=6   time: 2176 ms
+------------------query 120------------------
+diameter=2   time: 30 ms
+diameter=4   time: 48 ms
+diameter=6   time: 301 ms
+------------------query 121------------------
+diameter=2   time: 43 ms
+diameter=4   time: 47 ms
+diameter=6   time: 484 ms
+------------------query 122------------------
+diameter=2   time: 46 ms
+diameter=4   time: 483 ms
+diameter=6   time: 6944 ms
+------------------query 123------------------
+diameter=2   time: 23 ms
+diameter=4   time: 41 ms
+diameter=6   time: 43 ms
+------------------query 124------------------
+diameter=2   time: 38 ms
+diameter=4   time: 100 ms
+diameter=6   time: 1545 ms
+------------------query 125------------------
+diameter=2   time: 24 ms
+diameter=4   time: 507 ms
+diameter=6   time: 73 ms
+------------------query 126------------------
+diameter=2   time: 32 ms
+diameter=4   time: 35 ms
+diameter=6   time: 101 ms
+------------------query 127------------------
+diameter=2   time: 29 ms
+diameter=4   time: 29 ms
+diameter=6   time: 12 ms
+------------------query 128------------------
+diameter=2   time: 55 ms
+diameter=4   time: 909 ms
+diameter=6   time: 454 ms
+------------------query 129------------------
+diameter=2   time: 35 ms
+diameter=4   time: 61 ms
+diameter=6   time: 1762 ms
+------------------query 130------------------
+diameter=2   time: 36 ms
+diameter=4   time: 129 ms
+diameter=6   time: 144 ms
+------------------query 131------------------
+diameter=2   time: 10 ms
+diameter=4   time: 11 ms
+diameter=6   time: 12 ms
+------------------query 132------------------
+diameter=2   time: 36 ms
+diameter=4   time: 81 ms
+diameter=6   time: 1071 ms
+------------------query 133------------------
+diameter=2   time: 45 ms
+diameter=4   time: 265 ms
+diameter=6   time: 170 ms
+------------------query 134------------------
+diameter=2   time: 43 ms
+diameter=4   time: 109 ms
+diameter=6   time: 3814 ms
+------------------query 135------------------
+diameter=2   time: 30 ms
+diameter=4   time: 78 ms
+diameter=6   time: 453 ms
+------------------query 136------------------
+diameter=2   time: 22 ms
+diameter=4   time: 134 ms
+diameter=6   time: 176 ms
+------------------query 137------------------
+diameter=2   time: 12 ms
+diameter=4   time: 16 ms
+diameter=6   time: 13 ms
+------------------query 138------------------
+diameter=2   time: 141 ms
+diameter=4   time: 710 ms
+diameter=6   time: 3070 ms
+------------------query 139------------------
+diameter=2   time: 36 ms
+diameter=4   time: 29 ms
+diameter=6   time: 181 ms
+------------------query 140------------------
+diameter=2   time: 41 ms
+diameter=4   time: 72 ms
+diameter=6   time: 2662 ms
+------------------query 141------------------
+diameter=2   time: 33 ms
+diameter=4   time: 252 ms
+diameter=6   time: 4621 ms
+------------------query 142------------------
+diameter=2   time: 12 ms
+diameter=4   time: 13 ms
+diameter=6   time: 21 ms
+------------------query 143------------------
+diameter=2   time: 32 ms
+diameter=4   time: 76 ms
+diameter=6   time: 1271 ms
+------------------query 144------------------
+diameter=2   time: 31 ms
+diameter=4   time: 138 ms
+diameter=6   time: 4537 ms
+------------------query 145------------------
+diameter=2   time: 34 ms
+diameter=4   time: 1174 ms
+diameter=6   time: 3797 ms
+------------------query 146------------------
+diameter=2   time: 25 ms
+diameter=4   time: 657 ms
+diameter=6   time: 10491 ms
+------------------query 147------------------
+diameter=2   time: 26 ms
+diameter=4   time: 172 ms
+diameter=6   time: 600 ms
+------------------query 148------------------
+diameter=2   time: 29 ms
+diameter=4   time: 46 ms
+diameter=6   time: 294 ms
+------------------query 149------------------
+diameter=2   time: 13 ms
+diameter=4   time: 14 ms
+diameter=6   time: 1170 ms
+------------------query 150------------------
+diameter=2   time: 36 ms
+diameter=4   time: 201 ms
+diameter=6   time: 1439 ms
+------------------query 151------------------
+diameter=2   time: 36 ms
+diameter=4   time: 1005 ms
+diameter=6   time: 5184 ms
+------------------query 152------------------
+diameter=2   time: 37 ms
+diameter=4   time: 12 ms
+diameter=6   time: 12 ms
+------------------query 153------------------
+diameter=2   time: 27 ms
+diameter=4   time: 200 ms
+diameter=6   time: 26 ms
+------------------query 154------------------
+diameter=2   time: 38 ms
+diameter=4   time: 356 ms
+diameter=6   time: 3671 ms
+------------------query 155------------------
+diameter=2   time: 25 ms
+diameter=4   time: 745 ms
+diameter=6   time: 6684 ms
+------------------query 156------------------
+diameter=2   time: 38 ms
+diameter=4   time: 481 ms
+diameter=6   time: 511 ms
+------------------query 157------------------
+diameter=2   time: 46 ms
+diameter=4   time: 1953 ms
+diameter=6   time: 2131 ms
+------------------query 158------------------
+diameter=2   time: 26 ms
+diameter=4   time: 53 ms
+diameter=6   time: 563 ms
+------------------query 159------------------
+diameter=2   time: 55 ms
+diameter=4   time: 1187 ms
+diameter=6   time: 3631 ms
+------------------query 160------------------
+diameter=2   time: 33 ms
+diameter=4   time: 35 ms
+diameter=6   time: 2090 ms
+------------------query 161------------------
+diameter=2   time: 21 ms
+diameter=4   time: 10 ms
+diameter=6   time: 11 ms
+------------------query 162------------------
+diameter=2   time: 16 ms
+diameter=4   time: 28 ms
+diameter=6   time: 42 ms
+------------------query 163------------------
+diameter=2   time: 53 ms
+diameter=4   time: 32 ms
+diameter=6   time: 138 ms
+------------------query 164------------------
+diameter=2   time: 11 ms
+diameter=4   time: 12 ms
+diameter=6   time: 99 ms
+------------------query 165------------------
+diameter=2   time: 38 ms
+diameter=4   time: 127 ms
+diameter=6   time: 2222 ms
+------------------query 166------------------
+diameter=2   time: 31 ms
+diameter=4   time: 395 ms
+diameter=6   time: 135 ms
+------------------query 167------------------
+diameter=2   time: 46 ms
+diameter=4   time: 532 ms
+diameter=6   time: 3139 ms
+------------------query 168------------------
+diameter=2   time: 37 ms
+diameter=4   time: 37 ms
+diameter=6   time: 33 ms
+------------------query 169------------------
+diameter=2   time: 26 ms
+diameter=4   time: 482 ms
+diameter=6   time: 395 ms
+------------------query 170------------------
+diameter=2   time: 35 ms
+diameter=4   time: 53 ms
+diameter=6   time: 603 ms
+------------------query 171------------------
+diameter=2   time: 26 ms
+diameter=4   time: 167 ms
+diameter=6   time: 8540 ms
+------------------query 172------------------
+diameter=2   time: 24 ms
+diameter=4   time: 92 ms
+diameter=6   time: 855 ms
+------------------query 173------------------
+diameter=2   time: 32 ms
+diameter=4   time: 44 ms
+diameter=6   time: 846 ms
+------------------query 174------------------
+diameter=2   time: 24 ms
+diameter=4   time: 391 ms
+diameter=6   time: 1065 ms
+------------------query 175------------------
+diameter=2   time: 32 ms
+diameter=4   time: 58 ms
+diameter=6   time: 1296 ms
+------------------query 176------------------
+diameter=2   time: 37 ms
+diameter=4   time: 55 ms
+diameter=6   time: 3305 ms
+------------------query 177------------------
+diameter=2   time: 35 ms
+diameter=4   time: 444 ms
+diameter=6   time: 918 ms
+------------------query 178------------------
+diameter=2   time: 31 ms
+diameter=4   time: 197 ms
+diameter=6   time: 276 ms
+------------------query 179------------------
+diameter=2   time: 28 ms
+diameter=4   time: 44 ms
+diameter=6   time: 762 ms
+------------------query 180------------------
+diameter=2   time: 35 ms
+diameter=4   time: 56 ms
+diameter=6   time: 761 ms
+------------------query 181------------------
+diameter=2   time: 27 ms
+diameter=4   time: 122 ms
+diameter=6   time: 2396 ms
+------------------query 182------------------
+diameter=2   time: 36 ms
+diameter=4   time: 484 ms
+diameter=6   time: 5159 ms
+------------------query 183------------------
+diameter=2   time: 43 ms
+diameter=4   time: 60 ms
+diameter=6   time: 260 ms
+------------------query 184------------------
+diameter=2   time: 67 ms
+diameter=4   time: 2036 ms
+diameter=6   time: 14505 ms
+------------------query 185------------------
+diameter=2   time: 33 ms
+diameter=4   time: 61 ms
+diameter=6   time: 138 ms
+------------------query 186------------------
+diameter=2   time: 11 ms
+diameter=4   time: 10 ms
+diameter=6   time: 116 ms
+------------------query 187------------------
+diameter=2   time: 37 ms
+diameter=4   time: 1641 ms
+diameter=6   time: 1225 ms
+------------------query 188------------------
+diameter=2   time: 37 ms
+diameter=4   time: 624 ms
+diameter=6   time: 3145 ms
+------------------query 189------------------
+diameter=2   time: 24 ms
+diameter=4   time: 10 ms
+diameter=6   time: 285 ms
+------------------query 190------------------
+diameter=2   time: 33 ms
+diameter=4   time: 37 ms
+diameter=6   time: 1776 ms
+------------------query 191------------------
+diameter=2   time: 105 ms
+diameter=4   time: 163 ms
+diameter=6   time: 734 ms
+------------------query 192------------------
+diameter=2   time: 34 ms
+diameter=4   time: 52 ms
+diameter=6   time: 568 ms
+------------------query 193------------------
+diameter=2   time: 34 ms
+diameter=4   time: 1058 ms
+diameter=6   time: 948 ms
+------------------query 194------------------
+diameter=2   time: 32 ms
+diameter=4   time: 761 ms
+diameter=6   time: 2214 ms
+------------------query 195------------------
+diameter=2   time: 41 ms
+diameter=4   time: 64 ms
+diameter=6   time: 149 ms
+------------------query 196------------------
+diameter=2   time: 31 ms
+diameter=4   time: 608 ms
+diameter=6   time: 1851 ms
+------------------query 197------------------
+diameter=2   time: 62 ms
+diameter=4   time: 1855 ms
+diameter=6   time: 472 ms
+------------------query 198------------------
+diameter=2   time: 39 ms
+diameter=4   time: 648 ms
+diameter=6   time: 918 ms
+------------------query 199------------------
+diameter=2   time: 50 ms
+diameter=4   time: 63 ms
+diameter=6   time: 954 ms
+------------------query 200------------------
+diameter=2   time: 38 ms
+diameter=4   time: 384 ms
+diameter=6   time: 890 ms
+------------------query 201------------------
+diameter=2   time: 36 ms
+diameter=4   time: 761 ms
+diameter=6   time: 5280 ms
+------------------query 202------------------
+diameter=2   time: 35 ms
+diameter=4   time: 446 ms
+diameter=6   time: 2551 ms
+------------------query 203------------------
+diameter=2   time: 10 ms
+diameter=4   time: 10 ms
+diameter=6   time: 47 ms
+------------------query 204------------------
+diameter=2   time: 48 ms
+diameter=4   time: 67 ms
+diameter=6   time: 176 ms
+------------------query 205------------------
+diameter=2   time: 33 ms
+diameter=4   time: 263 ms
+diameter=6   time: 3617 ms
+------------------query 206------------------
+diameter=2   time: 30 ms
+diameter=4   time: 670 ms
+diameter=6   time: 3747 ms
+------------------query 207------------------
+diameter=2   time: 32 ms
+diameter=4   time: 45 ms
+diameter=6   time: 951 ms
+------------------query 208------------------
+diameter=2   time: 39 ms
+diameter=4   time: 257 ms
+diameter=6   time: 2972 ms
+------------------query 209------------------
+diameter=2   time: 40 ms
+diameter=4   time: 56 ms
+diameter=6   time: 160 ms
+------------------query 210------------------
+diameter=2   time: 39 ms
+diameter=4   time: 529 ms
+diameter=6   time: 349 ms
+------------------query 211------------------
+diameter=2   time: 35 ms
+diameter=4   time: 375 ms
+diameter=6   time: 2083 ms
+------------------query 212------------------
+diameter=2   time: 41 ms
+diameter=4   time: 11 ms
+diameter=6   time: 31 ms
+------------------query 213------------------
+diameter=2   time: 36 ms
+diameter=4   time: 565 ms
+diameter=6   time: 714 ms
+------------------query 214------------------
+diameter=2   time: 44 ms
+diameter=4   time: 29 ms
+diameter=6   time: 986 ms
+------------------query 215------------------
+diameter=2   time: 48 ms
+diameter=4   time: 174 ms
+diameter=6   time: 210 ms
+------------------query 216------------------
+diameter=2   time: 27 ms
+diameter=4   time: 37 ms
+diameter=6   time: 93 ms
+------------------query 217------------------
+diameter=2   time: 34 ms
+diameter=4   time: 639 ms
+diameter=6   time: 3161 ms
+------------------query 218------------------
+diameter=2   time: 27 ms
+diameter=4   time: 50 ms
+diameter=6   time: 753 ms
+------------------query 219------------------
+diameter=2   time: 40 ms
+diameter=4   time: 2141 ms
+diameter=6   time: 7090 ms
+------------------query 220------------------
+diameter=2   time: 27 ms
+diameter=4   time: 599 ms
+diameter=6   time: 1812 ms
+------------------query 221------------------
+diameter=2   time: 35 ms
+diameter=4   time: 231 ms
+diameter=6   time: 859 ms
+------------------query 222------------------
+diameter=2   time: 32 ms
+diameter=4   time: 109 ms
+diameter=6   time: 1992 ms
+------------------query 223------------------
+diameter=2   time: 37 ms
+diameter=4   time: 890 ms
+diameter=6   time: 502 ms
+------------------query 224------------------
+diameter=2   time: 46 ms
+diameter=4   time: 137 ms
+diameter=6   time: 384 ms
+------------------query 225------------------
+diameter=2   time: 33 ms
+diameter=4   time: 36 ms
+diameter=6   time: 1673 ms
+------------------query 226------------------
+diameter=2   time: 38 ms
+diameter=4   time: 263 ms
+diameter=6   time: 88 ms
+------------------query 227------------------
+diameter=2   time: 30 ms
+diameter=4   time: 36 ms
+diameter=6   time: 45 ms
+------------------query 228------------------
+diameter=2   time: 35 ms
+diameter=4   time: 232 ms
+diameter=6   time: 4301 ms
+------------------query 229------------------
+diameter=2   time: 31 ms
+diameter=4   time: 212 ms
+diameter=6   time: 4729 ms
+------------------query 230------------------
+diameter=2   time: 108 ms
+diameter=4   time: 113 ms
+diameter=6   time: 210 ms
+------------------query 231------------------
+diameter=2   time: 77 ms
+diameter=4   time: 477 ms
+diameter=6   time: 192 ms
+------------------query 232------------------
+diameter=2   time: 30 ms
+diameter=4   time: 37 ms
+diameter=6   time: 406 ms
+------------------query 233------------------
+diameter=2   time: 26 ms
+diameter=4   time: 210 ms
+diameter=6   time: 1907 ms
+------------------query 234------------------
+diameter=2   time: 34 ms
+diameter=4   time: 135 ms
+diameter=6   time: 461 ms
+------------------query 235------------------
+diameter=2   time: 40 ms
+diameter=4   time: 55 ms
+diameter=6   time: 363 ms
+------------------query 236------------------
+diameter=2   time: 35 ms
+diameter=4   time: 79 ms
+diameter=6   time: 103 ms
+------------------query 237------------------
+diameter=2   time: 48 ms
+diameter=4   time: 166 ms
+diameter=6   time: 456 ms
+------------------query 238------------------
+diameter=2   time: 39 ms
+diameter=4   time: 35 ms
+diameter=6   time: 96 ms
+------------------query 239------------------
+diameter=2   time: 32 ms
+diameter=4   time: 477 ms
+diameter=6   time: 2321 ms
+------------------query 240------------------
+diameter=2   time: 40 ms
+diameter=4   time: 135 ms
+diameter=6   time: 381 ms
+------------------query 241------------------
+diameter=2   time: 34 ms
+diameter=4   time: 588 ms
+diameter=6   time: 514 ms
+------------------query 242------------------
+diameter=2   time: 41 ms
+diameter=4   time: 175 ms
+diameter=6   time: 2732 ms
+------------------query 243------------------
+diameter=2   time: 33 ms
+diameter=4   time: 1136 ms
+diameter=6   time: 305 ms
+------------------query 244------------------
+diameter=2   time: 25 ms
+diameter=4   time: 125 ms
+diameter=6   time: 84 ms
+------------------query 245------------------
+diameter=2   time: 37 ms
+diameter=4   time: 103 ms
+diameter=6   time: 3868 ms
+------------------query 246------------------
+diameter=2   time: 29 ms
+diameter=4   time: 57 ms
+diameter=6   time: 625 ms
+------------------query 247------------------
+diameter=2   time: 12 ms
+diameter=4   time: 10 ms
+diameter=6   time: 115 ms
+------------------query 248------------------
+diameter=2   time: 33 ms
+diameter=4   time: 652 ms
+diameter=6   time: 2418 ms
+------------------query 249------------------
+diameter=2   time: 32 ms
+diameter=4   time: 676 ms
+diameter=6   time: 10896 ms
+------------------query 250------------------
+diameter=2   time: 27 ms
+diameter=4   time: 221 ms
+diameter=6   time: 3874 ms
+------------------query 251------------------
+diameter=2   time: 31 ms
+diameter=4   time: 541 ms
+diameter=6   time: 4580 ms
+------------------query 252------------------
+diameter=2   time: 33 ms
+diameter=4   time: 706 ms
+diameter=6   time: 5695 ms
+------------------query 253------------------
+diameter=2   time: 25 ms
+diameter=4   time: 210 ms
+diameter=6   time: 1837 ms
+------------------query 254------------------
+diameter=2   time: 40 ms
+diameter=4   time: 1385 ms
+diameter=6   time: 5295 ms
+------------------query 255------------------
+diameter=2   time: 25 ms
+diameter=4   time: 51 ms
+diameter=6   time: 69 ms
+------------------query 256------------------
+diameter=2   time: 38 ms
+diameter=4   time: 11 ms
+diameter=6   time: 114 ms
+------------------query 257------------------
+diameter=2   time: 45 ms
+diameter=4   time: 698 ms
+diameter=6   time: 4862 ms
+------------------query 258------------------
+diameter=2   time: 32 ms
+diameter=4   time: 188 ms
+diameter=6   time: 2751 ms
+------------------query 259------------------
+diameter=2   time: 47 ms
+diameter=4   time: 1076 ms
+diameter=6   time: 277 ms
+------------------query 260------------------
+diameter=2   time: 37 ms
+diameter=4   time: 151 ms
+diameter=6   time: 394 ms
+------------------query 261------------------
+diameter=2   time: 41 ms
+diameter=4   time: 113 ms
+diameter=6   time: 323 ms
+------------------query 262------------------
+diameter=2   time: 37 ms
+diameter=4   time: 130 ms
+diameter=6   time: 478 ms
+------------------query 263------------------
+diameter=2   time: 28 ms
+diameter=4   time: 83 ms
+diameter=6   time: 399 ms
+------------------query 264------------------
+diameter=2   time: 29 ms
+diameter=4   time: 116 ms
+diameter=6   time: 877 ms
+------------------query 265------------------
+diameter=2   time: 27 ms
+diameter=4   time: 65 ms
+diameter=6   time: 208 ms
+------------------query 266------------------
+diameter=2   time: 69 ms
+diameter=4   time: 1708 ms
+diameter=6   time: 11735 ms
+------------------query 267------------------
+diameter=2   time: 24 ms
+diameter=4   time: 60 ms
+diameter=6   time: 95 ms
+------------------query 268------------------
+diameter=2   time: 26 ms
+diameter=4   time: 516 ms
+diameter=6   time: 695 ms
+------------------query 269------------------
+diameter=2   time: 37 ms
+diameter=4   time: 380 ms
+diameter=6   time: 1417 ms
+------------------query 270------------------
+diameter=2   time: 29 ms
+diameter=4   time: 135 ms
+diameter=6   time: 4857 ms
+------------------query 271------------------
+diameter=2   time: 25 ms
+diameter=4   time: 14 ms
+diameter=6   time: 36 ms
+------------------query 272------------------
+diameter=2   time: 32 ms
+diameter=4   time: 203 ms
+diameter=6   time: 1125 ms
+------------------query 273------------------
+diameter=2   time: 30 ms
+diameter=4   time: 31 ms
+diameter=6   time: 2102 ms
+------------------query 274------------------
+diameter=2   time: 30 ms
+diameter=4   time: 36 ms
+diameter=6   time: 45 ms
+------------------query 275------------------
+diameter=2   time: 39 ms
+diameter=4   time: 36 ms
+diameter=6   time: 57 ms
+------------------query 276------------------
+diameter=2   time: 11 ms
+diameter=4   time: 10 ms
+diameter=6   time: 359 ms
+------------------query 277------------------
+diameter=2   time: 10 ms
+diameter=4   time: 10 ms
+diameter=6   time: 137 ms
+------------------query 278------------------
+diameter=2   time: 33 ms
+diameter=4   time: 89 ms
+diameter=6   time: 555 ms
+------------------query 279------------------
+diameter=2   time: 12 ms
+diameter=4   time: 14 ms
+diameter=6   time: 462 ms
+------------------query 280------------------
+diameter=2   time: 18 ms
+diameter=4   time: 20 ms
+diameter=6   time: 30 ms
+------------------query 281------------------
+diameter=2   time: 12 ms
+diameter=4   time: 73 ms
+diameter=6   time: 50 ms
+------------------query 282------------------
+diameter=2   time: 11 ms
+diameter=4   time: 213 ms
+diameter=6   time: 144 ms
+------------------query 283------------------
+diameter=2   time: 36 ms
+diameter=4   time: 14 ms
+diameter=6   time: 53 ms
+------------------query 284------------------
+diameter=2   time: 37 ms
+diameter=4   time: 15 ms
+diameter=6   time: 19 ms
+------------------query 285------------------
+diameter=2   time: 39 ms
+diameter=4   time: 31 ms
+diameter=6   time: 50 ms
+------------------query 286------------------
+diameter=2   time: 11 ms
+diameter=4   time: 15 ms
+diameter=6   time: 500 ms
+------------------query 287------------------
+diameter=2   time: 10 ms
+diameter=4   time: 11 ms
+diameter=6   time: 14 ms
+------------------query 288------------------
+diameter=2   time: 69 ms
+diameter=4   time: 27 ms
+diameter=6   time: 35 ms
+------------------query 289------------------
+diameter=2   time: 30 ms
+diameter=4   time: 33 ms
+diameter=6   time: 33 ms
+------------------query 290------------------
+diameter=2   time: 42 ms
+diameter=4   time: 46 ms
+diameter=6   time: 51 ms
+------------------query 291------------------
+diameter=2   time: 13 ms
+diameter=4   time: 129 ms
+diameter=6   time: 63 ms
+------------------query 292------------------
+diameter=2   time: 12 ms
+diameter=4   time: 48 ms
+diameter=6   time: 1466 ms
+------------------query 293------------------
+diameter=2   time: 28 ms
+diameter=4   time: 11 ms
+diameter=6   time: 26 ms
+------------------query 294------------------
+diameter=2   time: 10 ms
+diameter=4   time: 12 ms
+diameter=6   time: 198 ms
+------------------query 295------------------
+diameter=2   time: 41 ms
+diameter=4   time: 18 ms
+diameter=6   time: 25 ms
+------------------query 296------------------
+diameter=2   time: 36 ms
+diameter=4   time: 30 ms
+diameter=6   time: 109 ms
+------------------query 297------------------
+diameter=2   time: 38 ms
+diameter=4   time: 15 ms
+diameter=6   time: 26 ms
+------------------query 298------------------
+diameter=2   time: 33 ms
+diameter=4   time: 32 ms
+diameter=6   time: 31 ms
+------------------query 299------------------
+diameter=2   time: 30 ms
+diameter=4   time: 105 ms
+diameter=6   time: 377 ms
+------------------query 300------------------
+diameter=2   time: 19 ms
+diameter=4   time: 20 ms
+diameter=6   time: 23 ms
+------------------query 301------------------
+diameter=2   time: 37 ms
+diameter=4   time: 64 ms
+diameter=6   time: 99 ms
+------------------query 302------------------
+diameter=2   time: 32 ms
+diameter=4   time: 36 ms
+diameter=6   time: 193 ms
+------------------query 303------------------
+diameter=2   time: 17 ms
+diameter=4   time: 184 ms
+diameter=6   time: 326 ms
+------------------query 304------------------
+diameter=2   time: 18 ms
+diameter=4   time: 11 ms
+diameter=6   time: 10 ms
+------------------query 305------------------
+diameter=2   time: 104 ms
+diameter=4   time: 255 ms
+diameter=6   time: 1090 ms
+------------------query 306------------------
+diameter=2   time: 105 ms
+diameter=4   time: 160 ms
+diameter=6   time: 421 ms
+------------------query 307------------------
+diameter=2   time: 17 ms
+diameter=4   time: 108 ms
+diameter=6   time: 24 ms
+------------------query 308------------------
+diameter=2   time: 33 ms
+diameter=4   time: 24 ms
+diameter=6   time: 940 ms
+------------------query 309------------------
+diameter=2   time: 33 ms
+diameter=4   time: 45 ms
+diameter=6   time: 68 ms
+------------------query 310------------------
+diameter=2   time: 38 ms
+diameter=4   time: 42 ms
+diameter=6   time: 89 ms
+------------------query 311------------------
+diameter=2   time: 10 ms
+diameter=4   time: 11 ms
+diameter=6   time: 11 ms
+------------------query 312------------------
+diameter=2   time: 33 ms
+diameter=4   time: 182 ms
+diameter=6   time: 2769 ms
+------------------query 313------------------
+diameter=2   time: 26 ms
+diameter=4   time: 15 ms
+diameter=6   time: 18 ms
+------------------query 314------------------
+diameter=2   time: 11 ms
+diameter=4   time: 13 ms
+diameter=6   time: 696 ms
+------------------query 315------------------
+diameter=2   time: 34 ms
+diameter=4   time: 24 ms
+diameter=6   time: 51 ms
+------------------query 316------------------
+diameter=2   time: 27 ms
+diameter=4   time: 18 ms
+diameter=6   time: 64 ms
+------------------query 317------------------
+diameter=2   time: 27 ms
+diameter=4   time: 127 ms
+diameter=6   time: 376 ms
+------------------query 318------------------
+diameter=2   time: 27 ms
+diameter=4   time: 23 ms
+diameter=6   time: 1027 ms
+------------------query 319------------------
+diameter=2   time: 31 ms
+diameter=4   time: 726 ms
+diameter=6   time: 3444 ms
+------------------query 320------------------
+diameter=2   time: 43 ms
+diameter=4   time: 54 ms
+diameter=6   time: 82 ms
+------------------query 321------------------
+diameter=2   time: 12 ms
+diameter=4   time: 36 ms
+diameter=6   time: 352 ms
+------------------query 322------------------
+diameter=2   time: 30 ms
+diameter=4   time: 32 ms
+diameter=6   time: 57 ms
+------------------query 323------------------
+diameter=2   time: 26 ms
+diameter=4   time: 54 ms
+diameter=6   time: 55 ms
+------------------query 324------------------
+diameter=2   time: 30 ms
+diameter=4   time: 10 ms
+diameter=6   time: 354 ms
+------------------query 325------------------
+diameter=2   time: 60 ms
+diameter=4   time: 65 ms
+diameter=6   time: 76 ms
+------------------query 326------------------
+diameter=2   time: 23 ms
+diameter=4   time: 31 ms
+diameter=6   time: 55 ms
+------------------query 327------------------
+diameter=2   time: 19 ms
+diameter=4   time: 21 ms
+diameter=6   time: 720 ms
+------------------query 328------------------
+diameter=2   time: 28 ms
+diameter=4   time: 32 ms
+diameter=6   time: 58 ms
+------------------query 329------------------
+diameter=2   time: 16 ms
+diameter=4   time: 11 ms
+diameter=6   time: 12 ms
+------------------query 330------------------
+diameter=2   time: 34 ms
+diameter=4   time: 30 ms
+diameter=6   time: 149 ms
+------------------query 331------------------
+diameter=2   time: 31 ms
+diameter=4   time: 606 ms
+diameter=6   time: 1999 ms
+------------------query 332------------------
+diameter=2   time: 10 ms
+diameter=4   time: 32 ms
+diameter=6   time: 420 ms
+------------------query 333------------------
+diameter=2   time: 11 ms
+diameter=4   time: 75 ms
+diameter=6   time: 29 ms
+------------------query 334------------------
+diameter=2   time: 10 ms
+diameter=4   time: 10 ms
+diameter=6   time: 126 ms
+------------------query 335------------------
+diameter=2   time: 11 ms
+diameter=4   time: 13 ms
+diameter=6   time: 17 ms
+------------------query 336------------------
+diameter=2   time: 12 ms
+diameter=4   time: 12 ms
+diameter=6   time: 12 ms
+------------------query 337------------------
+diameter=2   time: 30 ms
+diameter=4   time: 34 ms
+diameter=6   time: 251 ms
+------------------query 338------------------
+diameter=2   time: 11 ms
+diameter=4   time: 61 ms
+diameter=6   time: 564 ms
+------------------query 339------------------
+diameter=2   time: 26 ms
+diameter=4   time: 129 ms
+diameter=6   time: 697 ms
+------------------query 340------------------
+diameter=2   time: 16 ms
+diameter=4   time: 36 ms
+diameter=6   time: 31 ms
+------------------query 341------------------
+diameter=2   time: 28 ms
+diameter=4   time: 23 ms
+diameter=6   time: 75 ms
+------------------query 342------------------
+diameter=2   time: 35 ms
+diameter=4   time: 107 ms
+diameter=6   time: 797 ms
+------------------query 343------------------
+diameter=2   time: 61 ms
+diameter=4   time: 41 ms
+diameter=6   time: 51 ms
+------------------query 344------------------
+diameter=2   time: 38 ms
+diameter=4   time: 23 ms
+diameter=6   time: 27 ms
+------------------query 345------------------
+diameter=2   time: 11 ms
+diameter=4   time: 11 ms
+diameter=6   time: 1131 ms
+------------------query 346------------------
+diameter=2   time: 18 ms
+diameter=4   time: 12 ms
+diameter=6   time: 580 ms
+------------------query 347------------------
+diameter=2   time: 33 ms
+diameter=4   time: 257 ms
+diameter=6   time: 1228 ms
+------------------query 348------------------
+diameter=2   time: 20 ms
+diameter=4   time: 20 ms
+diameter=6   time: 23 ms
+------------------query 349------------------
+diameter=2   time: 28 ms
+diameter=4   time: 25 ms
+diameter=6   time: 25 ms
+------------------query 350------------------
+diameter=2   time: 100 ms
+diameter=4   time: 117 ms
+diameter=6   time: 135 ms
+------------------query 351------------------
+diameter=2   time: 31 ms
+diameter=4   time: 330 ms
+diameter=6   time: 1949 ms
+------------------query 352------------------
+diameter=2   time: 34 ms
+diameter=4   time: 225 ms
+diameter=6   time: 103 ms
+------------------query 353------------------
+diameter=2   time: 11 ms
+diameter=4   time: 15 ms
+diameter=6   time: 883 ms
+------------------query 354------------------
+diameter=2   time: 12 ms
+diameter=4   time: 33 ms
+diameter=6   time: 25 ms
+------------------query 355------------------
+diameter=2   time: 13 ms
+diameter=4   time: 16 ms
+diameter=6   time: 22 ms
+------------------query 356------------------
+diameter=2   time: 11 ms
+diameter=4   time: 13 ms
+diameter=6   time: 663 ms
+------------------query 357------------------
+diameter=2   time: 12 ms
+diameter=4   time: 26 ms
+diameter=6   time: 19 ms
+------------------query 358------------------
+diameter=2   time: 11 ms
+diameter=4   time: 11 ms
+diameter=6   time: 482 ms
+------------------query 359------------------
+diameter=2   time: 11 ms
+diameter=4   time: 25 ms
+diameter=6   time: 23 ms
+------------------query 360------------------
+diameter=2   time: 11 ms
+diameter=4   time: 11 ms
+diameter=6   time: 300 ms
+------------------query 361------------------
+diameter=2   time: 16 ms
+diameter=4   time: 11 ms
+diameter=6   time: 497 ms
+------------------query 362------------------
+diameter=2   time: 31 ms
+diameter=4   time: 49 ms
+diameter=6   time: 237 ms
+------------------query 363------------------
+diameter=2   time: 19 ms
+diameter=4   time: 14 ms
+diameter=6   time: 15 ms
+------------------query 364------------------
+diameter=2   time: 22 ms
+diameter=4   time: 38 ms
+diameter=6   time: 70 ms
+------------------query 365------------------
+diameter=2   time: 15 ms
+diameter=4   time: 12 ms
+diameter=6   time: 162 ms
+------------------query 366------------------
+diameter=2   time: 12 ms
+diameter=4   time: 34 ms
+diameter=6   time: 197 ms
+------------------query 367------------------
+diameter=2   time: 43 ms
+diameter=4   time: 135 ms
+diameter=6   time: 169 ms
+------------------query 368------------------
+diameter=2   time: 41 ms
+diameter=4   time: 66 ms
+diameter=6   time: 119 ms
+------------------query 369------------------
+diameter=2   time: 12 ms
+diameter=4   time: 30 ms
+diameter=6   time: 67 ms
+------------------query 370------------------
+diameter=2   time: 12 ms
+diameter=4   time: 54 ms
+diameter=6   time: 252 ms
+------------------query 371------------------
+diameter=2   time: 47 ms
+diameter=4   time: 43 ms
+diameter=6   time: 410 ms
+------------------query 372------------------
+diameter=2   time: 43 ms
+diameter=4   time: 72 ms
+diameter=6   time: 110 ms
+------------------query 373------------------
+diameter=2   time: 32 ms
+diameter=4   time: 158 ms
+diameter=6   time: 234 ms
+------------------query 374------------------
+diameter=2   time: 29 ms
+diameter=4   time: 42 ms
+diameter=6   time: 264 ms
+------------------query 375------------------
+diameter=2   time: 28 ms
+diameter=4   time: 26 ms
+diameter=6   time: 337 ms
+------------------query 376------------------
+diameter=2   time: 41 ms
+diameter=4   time: 51 ms
+diameter=6   time: 461 ms
+------------------query 377------------------
+diameter=2   time: 10 ms
+diameter=4   time: 18 ms
+diameter=6   time: 36 ms
+------------------query 378------------------
+diameter=2   time: 30 ms
+diameter=4   time: 315 ms
+diameter=6   time: 284 ms
+------------------query 379------------------
+diameter=2   time: 35 ms
+diameter=4   time: 225 ms
+diameter=6   time: 452 ms
+------------------query 380------------------
+diameter=2   time: 30 ms
+diameter=4   time: 47 ms
+diameter=6   time: 679 ms
+------------------query 381------------------
+diameter=2   time: 38 ms
+diameter=4   time: 192 ms
+diameter=6   time: 2349 ms
+------------------query 382------------------
+diameter=2   time: 29 ms
+diameter=4   time: 91 ms
+diameter=6   time: 47 ms
+------------------query 383------------------
+diameter=2   time: 22 ms
+diameter=4   time: 23 ms
+diameter=6   time: 1060 ms
+------------------query 384------------------
+diameter=2   time: 33 ms
+diameter=4   time: 35 ms
+diameter=6   time: 392 ms
+------------------query 385------------------
+diameter=2   time: 30 ms
+diameter=4   time: 44 ms
+diameter=6   time: 566 ms
+------------------query 386------------------
+diameter=2   time: 36 ms
+diameter=4   time: 112 ms
+diameter=6   time: 436 ms
+------------------query 387------------------
+diameter=2   time: 10 ms
+diameter=4   time: 10 ms
+diameter=6   time: 472 ms
+------------------query 388------------------
+diameter=2   time: 10 ms
+diameter=4   time: 339 ms
+diameter=6   time: 67 ms
+------------------query 389------------------
+diameter=2   time: 10 ms
+diameter=4   time: 72 ms
+diameter=6   time: 1124 ms
+------------------query 390------------------
+diameter=2   time: 10 ms
+diameter=4   time: 22 ms
+diameter=6   time: 20 ms
+------------------query 391------------------
+diameter=2   time: 36 ms
+diameter=4   time: 496 ms
+diameter=6   time: 89 ms
+------------------query 392------------------
+diameter=2   time: 11 ms
+diameter=4   time: 370 ms
+diameter=6   time: 1854 ms
+------------------query 393------------------
+diameter=2   time: 31 ms
+diameter=4   time: 75 ms
+diameter=6   time: 280 ms
+------------------query 394------------------
+diameter=2   time: 32 ms
+diameter=4   time: 167 ms
+diameter=6   time: 171 ms
+------------------query 395------------------
+diameter=2   time: 31 ms
+diameter=4   time: 57 ms
+diameter=6   time: 155 ms
+------------------query 396------------------
+diameter=2   time: 31 ms
+diameter=4   time: 36 ms
+diameter=6   time: 460 ms
+------------------query 397------------------
+diameter=2   time: 34 ms
+diameter=4   time: 75 ms
+diameter=6   time: 498 ms
+------------------query 398------------------
+diameter=2   time: 27 ms
+diameter=4   time: 68 ms
+diameter=6   time: 375 ms
+------------------query 399------------------
+diameter=2   time: 40 ms
+diameter=4   time: 42 ms
+diameter=6   time: 51 ms
+------------------query 400------------------
+diameter=2   time: 26 ms
+diameter=4   time: 185 ms
+diameter=6   time: 836 ms
+------------------query 401------------------
+diameter=2   time: 40 ms
+diameter=4   time: 2356 ms
+diameter=6   time: 3001 ms
+------------------query 402------------------
+diameter=2   time: 12 ms
+diameter=4   time: 12 ms
+diameter=6   time: 16 ms
+------------------query 403------------------
+diameter=2   time: 34 ms
+diameter=4   time: 27 ms
+diameter=6   time: 191 ms
+------------------query 404------------------
+diameter=2   time: 28 ms
+diameter=4   time: 55 ms
+diameter=6   time: 386 ms
+------------------query 405------------------
+diameter=2   time: 28 ms
+diameter=4   time: 26 ms
+diameter=6   time: 421 ms
+------------------query 406------------------
+diameter=2   time: 34 ms
+diameter=4   time: 767 ms
+diameter=6   time: 75 ms
+------------------query 407------------------
+diameter=2   time: 22 ms
+diameter=4   time: 31 ms
+diameter=6   time: 41 ms
+------------------query 408------------------
+diameter=2   time: 11 ms
+diameter=4   time: 16 ms
+diameter=6   time: 105 ms
+------------------query 409------------------
+diameter=2   time: 14 ms
+diameter=4   time: 48 ms
+diameter=6   time: 152 ms
+------------------query 410------------------
+diameter=2   time: 37 ms
+diameter=4   time: 34 ms
+diameter=6   time: 1481 ms
+------------------query 411------------------
+diameter=2   time: 32 ms
+diameter=4   time: 188 ms
+diameter=6   time: 328 ms
+------------------query 412------------------
+diameter=2   time: 35 ms
+diameter=4   time: 48 ms
+diameter=6   time: 486 ms
+------------------query 413------------------
+diameter=2   time: 36 ms
+diameter=4   time: 157 ms
+diameter=6   time: 3203 ms
+------------------query 414------------------
+diameter=2   time: 31 ms
+diameter=4   time: 164 ms
+diameter=6   time: 814 ms
+------------------query 415------------------
+diameter=2   time: 16 ms
+diameter=4   time: 38 ms
+diameter=6   time: 49 ms
+------------------query 416------------------
+diameter=2   time: 48 ms
+diameter=4   time: 834 ms
+diameter=6   time: 4949 ms
+------------------query 417------------------
+diameter=2   time: 29 ms
+diameter=4   time: 454 ms
+diameter=6   time: 2781 ms
+------------------query 418------------------
+diameter=2   time: 34 ms
+diameter=4   time: 114 ms
+diameter=6   time: 3738 ms
+------------------query 419------------------
+diameter=2   time: 63 ms
+diameter=4   time: 956 ms
+diameter=6   time: 669 ms
+------------------query 420------------------
+diameter=2   time: 31 ms
+diameter=4   time: 441 ms
+diameter=6   time: 309 ms
+------------------query 421------------------
+diameter=2   time: 36 ms
+diameter=4   time: 34 ms
+diameter=6   time: 80 ms
+------------------query 422------------------
+diameter=2   time: 30 ms
+diameter=4   time: 330 ms
+diameter=6   time: 727 ms
+------------------query 423------------------
+diameter=2   time: 29 ms
+diameter=4   time: 83 ms
+diameter=6   time: 129 ms
+------------------query 424------------------
+diameter=2   time: 43 ms
+diameter=4   time: 520 ms
+diameter=6   time: 286 ms
+------------------query 425------------------
+diameter=2   time: 27 ms
+diameter=4   time: 81 ms
+diameter=6   time: 90 ms
+------------------query 426------------------
+diameter=2   time: 28 ms
+diameter=4   time: 163 ms
+diameter=6   time: 1110 ms
+------------------query 427------------------
+diameter=2   time: 30 ms
+diameter=4   time: 497 ms
+diameter=6   time: 826 ms
+------------------query 428------------------
+diameter=2   time: 22 ms
+diameter=4   time: 448 ms
+diameter=6   time: 1016 ms
+------------------query 429------------------
+diameter=2   time: 11 ms
+diameter=4   time: 141 ms
+diameter=6   time: 170 ms
+------------------query 430------------------
+diameter=2   time: 11 ms
+diameter=4   time: 76 ms
+diameter=6   time: 2031 ms
+------------------query 431------------------
+diameter=2   time: 52 ms
+diameter=4   time: 53 ms
+diameter=6   time: 7196 ms
+------------------query 432------------------
+diameter=2   time: 44 ms
+diameter=4   time: 138 ms
+diameter=6   time: 664 ms
+------------------query 433------------------
+diameter=2   time: 30 ms
+diameter=4   time: 391 ms
+diameter=6   time: 149 ms
+------------------query 434------------------
+diameter=2   time: 33 ms
+diameter=4   time: 26 ms
+diameter=6   time: 255 ms
+------------------query 435------------------
+diameter=2   time: 24 ms
+diameter=4   time: 637 ms
+diameter=6   time: 112 ms
+------------------query 436------------------
+diameter=2   time: 34 ms
+diameter=4   time: 51 ms
+diameter=6   time: 1982 ms
+------------------query 437------------------
+diameter=2   time: 34 ms
+diameter=4   time: 179 ms
+diameter=6   time: 178 ms

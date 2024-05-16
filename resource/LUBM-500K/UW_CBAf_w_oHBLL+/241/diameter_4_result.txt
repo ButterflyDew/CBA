@@ -1,0 +1,9 @@
+D is 4
+The point are: 44 180571 280594 378555 388982 
+The edges are: [44 180571]
+[44 280594]
+[44 378555]
+[44 388982]
+Query size is: 4
+180571 280594 388982 378555 
+The sum weight of Tree is: 4

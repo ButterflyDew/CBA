@@ -31,7 +31,6 @@ void CBA::Expand(Tree &T, int c, vector <int> path)
     }
 }
 
-//姑且认为 K 是点集的集合, O(n kglog)
 pair <vector <int>, int> CBA::OPT_MC(Graph &G, vector <vector <int> > &K, int D)
 {
     int n = G.n;
@@ -79,7 +78,7 @@ pair <vector <int>, int> CBA::OPT_MC(Graph &G, vector <vector <int> > &K, int D)
 
     return make_pair(M, c);
 }
-//qglog
+
 double CBA::get_sum(Graph &G, vector <int> &M, int v, int D)
 {
     double sum = 0;
@@ -90,7 +89,7 @@ double CBA::get_sum(Graph &G, vector <int> &M, int v, int D)
     }
     return sum;
 }
-// O(kglog)
+
 vector <int> CBA::MaxM(Graph &G, vector <vector <int> > &K, int D, int v)
 {
     //fprintf(stderr, "In MaxM: v is %d\n", v);
@@ -120,34 +119,48 @@ vector <int> CBA::MaxM(Graph &G, vector <vector <int> > &K, int D, int v)
     return M;
 }
 
-void CBA::build_qhbll(vector <vector <int> > &K, int D)
+void CBA::build_qhbll(vector <vector <int> > &K, int D, int typ)
 {
-    qhbll.clear();
-    qhbll.resize(K.size() + 1);
+    while(qhbll.size() < K.size() + 1) qhbll.push_back(qHBLL());
+    // qhbll.clear();
+    // qhbll.resize(K.size() + 1);
     vector <int> fq;
     int j = 0;
     for(auto ki: K)
     {
         qhbll[++j].clear();
+        qhbll[j].typ = typ;
         qhbll[j].insert_qry(ki, hbll.L, D);
         for(auto k: ki) fq.push_back(k);
     }
+    qhbll[0].clear();
+    qhbll[0].typ = typ;
     qhbll[0].insert_qry(fq, hbll.L, D);
 }
-
-//点数上界 qD O((qD)^3glog) +  O(n kglog)
-Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
+// typ: 3 CBA 4 CBA+ 5 CBA_list 6 CBA_hash
+Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D, int typ)
 {
     //hbll.build_hbll(G);
-    build_qhbll(K, D);
+    build_qhbll(K, D/2+1, max(0, typ - 4));
 
+    dis_vtoall.resize(G.n + 2, -1);
+    if(hop_vtog.empty()) hop_vtog.resize(K.size() + 1, vector <int> (G.n + 1, -1) );
+    else
+    {
+        while(hop_vtog.size()  < K.size() + 1) hop_vtog.emplace_back(vector <int> (G.n + 1, -1));
+        for(int i = 0; i < K.size()  + 1; i++)
+            while(hop_vtog[i].size() < G.n + 1)
+                hop_vtog[i].emplace_back(-1);
+    }
+
+    algo_typ = typ - 3;
     start_time = get_now_time();
-
+    
     //auto [M, c] = OPT_MC(G, K, D);
-    auto [M, c] = Pruned_OPT_MC(G, K, D);
+    auto [M, c] = typ == 3 ? OPT_MC(G, K, D): Pruned_OPT_MC(G, K, D);
     revM = M;
 
-    after_optmc_time =get_now_time();
+    after_optmc_time = get_now_time();
     // cerr << "OPT_MC ok" << endl;
     // fprintf(stderr, "Initial M:\n");
     // for(auto x: M) fprintf(stderr, "%d ", x);
@@ -217,28 +230,71 @@ Tree CBA::Go_CBA(Graph G, vector <vector <int> > K, int D)
 
 void CBA::read_hbll(string filepre)
 {
-    ifstream inputFile(filepre + "/hbll.txt");
+    fprintf(stderr,"Starting reading HBLL\n");
+    ifstream inputFile(filepre);
 
     if (!inputFile.is_open()) 
-        cerr << "Can't open file: " <<  filepre + "/hbll.txt" << endl;
+        cerr << "Can't open file: " <<  filepre << endl;
+    inputFile.tie(nullptr);
 
-    string line;
+    hbll.clear();
+    hbll.clearbuc();
+    hbll.clearcnt();
     hbll.L.push_back(vector <Triple> ());
     hbll.prew.push_back(vector <int> ());
+    for(int D = 2; D <= 6; D += 2)
+    {
+        int id = D/2-1;
+        dhbll[id].clear();
+        dhbll[id].clearbuc();
+        dhbll[id].clearcnt();
+        dhbll[id].L.push_back(vector <Triple> ());
+        dhbll[id].prew.push_back(vector <int> ());
+    }
 
+    
+    string line;
+    int per = -1, n, ic;
     while (getline(inputFile, line)) 
     {
         istringstream lines(line);
+        if(per == -1)
+        {
+            per = 1;
+            ic = 0;
+            lines >> n;    
+            continue;
+        }
+        ++ic;
+        if(ic == n/100*per)
+        {
+            cerr << "Finish input "<< per <<"%\n";
+            ++per;
+        }
         string lin;
         ++ hbll.n;
         hbll.L.push_back(vector <Triple> ());
         hbll.prew.push_back(vector <int> ());
+        for(int D = 2; D <= 6; D += 2)
+        {
+            int id = D/2-1;
+            ++dhbll[id].n;
+            dhbll[id].L.push_back(vector <Triple> ());
+            dhbll[id].prew.push_back(vector <int> ());
+        }
         while(getline(lines, lin, ','))
         {
             //cout << "set " << lin << endl;
             auto [a, b, c, d] = extract_values(lin);
             hbll.L[hbll.n].push_back(Triple(a, b, c));
             hbll.prew[hbll.n].push_back(d);
+            for(int D = 2; D <= 6; D += 2)
+                if(b <= D/2)
+                {
+                    int id = D/2-1;
+                    dhbll[id].L[dhbll[id].n].push_back(Triple(a, b, c));
+                    dhbll[id].prew[dhbll[id].n].push_back(d);
+                }
             // auto num = extractIntegers(lin);
             // if(num.size() == 4)
             // {
@@ -251,29 +307,48 @@ void CBA::read_hbll(string filepre)
     }
     hbll.rearrange();
     aver_l = hbll.Average_L();
+    double aver_ld[4]={};
+    for(int D = 2; D <= 6; D += 2)
+    {
+        int id = D/2-1;
+        dhbll[id].rearrange();
+        dhbll[id].arrange_nxtl();
+        aver_ld[id] = dhbll[id].Average_L();
+    }
+    fprintf(stderr, "averl: %lf %lf %lf %lf\n",aver_l, aver_ld[0], aver_ld[1], aver_ld[2]);
 }
 
-int CBA::getpri(vector <vector <int> > &K, int v, int h, int D)
+int CBA::getpri(vector <vector <int> > &K, int v, int h, int D, int prt)
 {
     int ret = 0, curid = -1;
     for(auto Ki: K)
     {
+        
         ++curid;
-        if(vq[curid][v])
+        if(prt >> (curid + 1) & 1)
         {
-            if(h + disq[curid][v] <= D)
-                ++ret;
+            ++ret;
             continue;
         }
-
-        int mi = qhbll[curid + 1].GET_UD(hbll.L[v]);
+        // if(vq[curid][v])
+        // {
+        //     if(h + disq[curid][v] <= D)
+        //         ++ret;
+        //     continue;
+        // }
+        int mi;
+        if(hop_vtog[curid + 1][v] != -1 && algo_typ > 1)
+            mi = hop_vtog[curid + 1][v]; 
+        else
+        {
+            mi = qhbll[curid + 1].GET_UD(dhbll[D/2-1].L[v], dhbll[D/2-1].nxtl[v]);
+            hop_vtog[curid + 1][v] = mi;
+            res_vtog.emplace_back(curid, v);
+        }    
         
-        // int mi = inf;
-        // for(auto k: Ki)
-        //     mi = min(mi, hbll.GET_UD(k, v));
         
-        vq[curid][v] = 1;
-        disq[curid][v] = mi;
+        // vq[curid][v] = 1;
+        // disq[curid][v] = mi;
 
         if(h + mi <= D)
             ++ret;
@@ -290,21 +365,12 @@ pair <vector <int>, double> CBA::Pruned_MaxM(Graph &G, vector <vector <int> > &K
     for(auto Ki: K)
     {
         ++curid;
-        if(vq[curid][v]&&disq[curid][v]>D/2) continue;
+        if(hop_vtog[curid + 1][v] > D/2 && algo_typ > 1) continue;
+        //if(vq[curid][v]&&disq[curid][v]>D/2) continue;
         int u;
         double mi = INF;
-        tie(u, mi) = qhbll[curid + 1].GET_WD(D/2, hbll.L[v]);
+        tie(u, mi) = qhbll[curid + 1].GET_WD(D/2, dhbll[D/2-1].L[v]);
 
-        // int u, mi = inf;
-        // for(auto k: Ki)
-        // {
-        //     int wd = hbll.GET_WD(v, k, D/2);
-        //     if(wd < mi)
-        //     {
-        //         mi = wd;
-        //         u = k;
-        //     }
-        // }
         if(abs(mi - INF) > eps)
         {
             sum += mi;
@@ -325,69 +391,95 @@ pair <vector <int>, double> CBA::Pruned_MaxM(Graph &G, vector <vector <int> > &K
 
 pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K, int D)
 {
-    hbll.clearbuc();
+    //hbll.clearbuc();
     int n = G.n;
-    disq.clear(), vq.clear(), miq.clear(), vmq.clear();
-    disq.resize(K.size(), vector<int>(n+1, 0));
-    vq.resize(K.size(), vector<bool>(n+1, false));
-    miq.resize(n+1, 0);
-    vmq.resize(n+1, false);
+    // disq.clear(), vq.clear(), miq.clear(), vmq.clear();
+    // disq.resize(K.size(), vector<int>(n+1, 0));
+    // vq.resize(K.size(), vector<bool>(n+1, false));
+    // miq.resize(n+1, 0);
+    // vmq.resize(n+1, false);
 
-    vector <int> checked(n+1), mhp(n+1, inf);
+    vector <int> checked(n + 1), mhp(n + 1, inf);
+    vector <double> dis(n + 1, 1e18);
     priority_queue<qnode> Q;
     
-    set <int> inter;
-    for(auto Ki: K) for(auto k: Ki)
-        inter.insert(k);
-
-    for(auto u: inter)
+    map <int,int> inter;
+    int curid = 0;
+    for(auto Ki: K) 
     {
-        Q.push(qnode(u, 0, getpri(K, u, 0, D)));
+        ++curid;
+        for(auto k: Ki)
+            inter[k]|=1<<curid;
+    }
+
+    for(auto [u, prt]: inter)
+    {
+        Q.push(qnode(u, 0, getpri(K, u, 0, D, prt), prt));
         //fprintf(stderr, "u: %d pri: %d\n", u, getpri(K, u, 0, D));
         mhp[u] = 0;
+        dis[u] = 0;
     }
 
     vector <int> M;
     double Msum = 0;
     int c = 0;
+    
+    int pricnt[12]={};
 
     int qpcnt = 0;
+    int cutcnt = 0, dcutcnt = 0, pdcutcnt = 0;
+    int g = K.size();
     while(!Q.empty())
     {
         ++qpcnt;
         auto qnow = Q.top();
         Q.pop();
-        int v = qnow.v, h = qnow.h, priv = qnow.priv;
+        int v = qnow.v, h = qnow.h, priv = qnow.priv, prt = qnow.prt;
+        pricnt[priv]++;
         int Ms = M.size();
         if(priv < Ms) break;
         if(priv == Ms)
         {
             // v 为根的最小距离，在 D/2 范围内
-            double mi = INF;
-            if(vmq[v])
-            {
-                mi = miq[v];
-            }
-            else
-            {
-                mi = qhbll[0].GET_WD(D/2, hbll.L[v]).second;
+            // double mi = INF;
+            // if(vmq[v])
+            // {
+            //     mi = miq[v];
+            // }
+            // else
+            // {
+            //     mi = qhbll[0].GET_WD(D/2, dhbll[D/2-1].L[v]).second;
                 
-                // for(auto Ki: K)
-                // {
-                //     for(auto k: Ki)
-                //         mi = min(mi, hbll.GET_WD(v, k, D/2));
-                // }
-                vmq[v] = true;
-                miq[v] = mi;
-            }
-            if(mi * Ms >= 1.0 * Msum)
+            //     // for(auto Ki: K)
+            //     // {
+            //     //     for(auto k: Ki)
+            //     //         mi = min(mi, hbll.GET_WD(v, k, D/2));
+            //     // }
+            //     vmq[v] = true;
+            //     miq[v] = mi;
+            // }
+            if(dis[v] * Ms >= 1.0 * Msum && algo_typ > 1)
+            {
+                ++dcutcnt;
                 continue;
+            }
+            double mi;
+            if(dis_vtoall[v] > 0)
+                mi = dis_vtoall[v];
+            else
+                mi = dis_vtoall[v] = qhbll[0].GET_WD(D/2, dhbll[D/2-1].L[v]).second;
+
+            if(mi * Ms >= 1.0 * Msum)
+            {
+                ++cutcnt;
+                continue;
+            }    
         }
         if(!checked[v])
         {
-            vector <int> Mv;
-            double sum;
-            tie(Mv, sum) = Pruned_MaxM(G, K, D, v);
+            // vector <int> Mv;
+            // double sum;
+            auto [Mv, sum] = Pruned_MaxM(G, K, D, v);
 
             // fprintf(stderr, "in check: %d\n", v);
             // for(auto x: Mv) fprintf(stderr, "%d ", x);
@@ -406,17 +498,47 @@ pair <vector <int>, int> CBA::Pruned_OPT_MC(Graph &G, vector <vector <int> > &K,
         {
             for(auto [nxt, w]: G.ed[v])
             {
+                dis[nxt] = min(dis[nxt], dis[v] + w);
                 if(h + 1 < mhp[nxt])
                 {
-                    Q.push(qnode(nxt, h + 1, getpri(K, nxt, h + 1, D)));
+                    if(M.size() == g && dis[nxt] * g > Msum && algo_typ > 1)
+                    {
+                        ++pdcutcnt;
+                        continue;
+                    }
+                    Q.push(qnode(nxt, h + 1, getpri(K, nxt, h + 1, D, prt), prt));
                     mhp[nxt] = h + 1;
                 }
             }
         }
     }
-    // fprintf(stderr, "In omtmc, pqcnt: %d\n", qpcnt);
+    for(auto [cid, v]: res_vtog)
+        hop_vtog[cid + 1][v] = -1;
+    res_vtog.clear();
+
     // fprintf(stderr, "ret is :%lu %d\n", M.size(), c);
     // for(auto x: M) fprintf(stderr, "%d ", x);
     // fprintf(stderr, "\n");
+
+    // fprintf(stderr, "In omtmc, pqcnt: %d\n", qpcnt);
+    // fprintf(stderr, "group size:%lu\n", K.size());
+    // fprintf(stderr, "cut cnt:%d\n", cutcnt);
+    // fprintf(stderr, "dcut cnt:%d\n", dcutcnt);
+    // fprintf(stderr, "pdcut cnt:%d\n", pdcutcnt);
+
+    // long long cntud = 0, cntwd = 0, sumud = 0, sumwd = 0;
+    // for(int i = 0; i <= K.size(); i++) 
+    // {
+    //     cntud += qhbll[i].cntud, cntwd += qhbll[i].cntwd;
+    //     sumud += qhbll[i].sumud, sumwd += qhbll[i].sumwd;
+    // }
+    // fprintf(stderr, "cnt:%lld %lld\nsum:%lld %lld\nratio:%.3lf %.3lf\n",cntud, cntwd, sumud, sumwd, 1.0*sumud/cntud, 1.0*sumwd/cntwd);
+
+    // // int primx = 0;
+    // // for(int i = 0; i < 11; i++) if(pricnt[i] > 0) primx = i;
+    // // fprintf(stderr, "pricnt:\n");
+    // // for(int i = 0; i <= primx; i++) fprintf(stderr, "%d%c", pricnt[i], " \n"[i == primx]);
+    // fprintf(stderr, "\n");
+
     return make_pair(M, c);
 }

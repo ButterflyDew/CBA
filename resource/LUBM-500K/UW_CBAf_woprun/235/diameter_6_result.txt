@@ -1,0 +1,9 @@
+D is 6
+The point are: 3031 378763 417951 463785 537334 
+The edges are: [3031 378763]
+[3031 417951]
+[3031 463785]
+[3031 537334]
+Query size is: 4
+537334 417951 378763 463785 
+The sum weight of Tree is: 4

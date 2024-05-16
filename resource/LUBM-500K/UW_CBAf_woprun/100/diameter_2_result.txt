@@ -1,0 +1,8 @@
+D is 2
+The point are: 2380 345641 358931 525985 
+The edges are: [2380 345641]
+[2380 358931]
+[2380 525985]
+Query size is: 3
+358931 345641 525985 
+The sum weight of Tree is: 3

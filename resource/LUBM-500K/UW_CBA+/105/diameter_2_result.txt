@@ -1,0 +1,9 @@
+D is 2
+The point are: 2227 179965 198298 246419 515675 
+The edges are: [2227 179965]
+[2227 198298]
+[2227 246419]
+[2227 515675]
+Query size is: 4
+198298 246419 515675 179965 
+The sum weight of Tree is: 4

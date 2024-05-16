@@ -1,0 +1,9 @@
+D is 6
+The point are: 919 98531 173516 385368 510135 
+The edges are: [919 385368]
+[919 510135]
+[919 98531]
+[98531 173516]
+Query size is: 4
+919 510135 173516 385368 
+The sum weight of Tree is: 4

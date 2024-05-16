@@ -97,8 +97,9 @@ void testv()
     exit(0);
 }
 
-string fordername = "/LUBM-50K_Weight";
-//string fordername = "/testdata-d";
+//string fordername = "/LUBM-50K_Pruned_W";
+//string fordername = "/testdata";
+string fordername = "/test_func_50K";
 void go_cba()
 {
     filepre = "PaperData" + fordername;
@@ -121,15 +122,14 @@ void go_cba()
 
     //double aver = hbll.Average_L();
     //testv();
-
     for(auto Query: Queryset)
     {
-        if(qid == 1)
-        {
-            ++qid;
-            break;
-            //continue;
-        }
+        // if(qid < 188)
+        // {
+        //     ++qid;
+        //     //break;
+        //     continue;
+        // }
         fprintf(stderr, "Start go %d\n", qid);
         int siz_n = 0, siz_q = 0;
         for(auto Q: Query)
@@ -145,7 +145,7 @@ void go_cba()
             t_loop.push_back(cba.end_time - cba.after_optmc_time);
             T.Print_to_file(filepre, qid, D, cba.revM);
             aver_l = cba.aver_l;
-            cba.hbll.printcnt();
+            //cba.hbll.printcnt();
             fprintf(stderr, "D = %d done!\n", D);
         }
         Print_time(filepre, qid, siz_n, siz_q, aver_l, t_optmc, t_loop);

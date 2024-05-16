@@ -1,0 +1,11 @@
+D is 4
+The point are: 4 2062 2064 2065 14336 25433 30351 
+The edges are: [4 2062]
+[4 2065]
+[4 30351]
+[2062 2064]
+[2065 25433]
+[30351 14336]
+Query size is: 4
+2064 25433 4 14336 
+The sum weight of Tree is: 6

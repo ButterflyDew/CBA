@@ -1,4 +1,0 @@
-D is 2
-The point are: 115 15635 29446 
-The edges are: [115 15635]
-[115 29446]

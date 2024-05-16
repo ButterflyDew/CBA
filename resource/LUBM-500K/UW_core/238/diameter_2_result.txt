@@ -1,0 +1,9 @@
+D is 2
+The point are: 803 808 355325 377763 535669 
+The edges are: [808 355325]
+[808 535669]
+[808 377763]
+[808 803]
+Query size is: 4
+355325 535669 377763 803 
+The sum weight of Tree is: 4

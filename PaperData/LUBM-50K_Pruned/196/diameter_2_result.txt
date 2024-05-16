@@ -1,4 +1,0 @@
-D is 2
-The point are: 86 3001 47028 
-The edges are: [86 3001]
-[86 47028]

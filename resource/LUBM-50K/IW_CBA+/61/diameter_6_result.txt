@@ -1,0 +1,9 @@
+D is 6
+The point are: 73 1813 15582 41345 48775 
+The edges are: [73 1813]
+[73 15582]
+[73 41345]
+[73 48775]
+Query size is: 4
+1813 15582 41345 48775 
+The sum weight of Tree is: 40.7031

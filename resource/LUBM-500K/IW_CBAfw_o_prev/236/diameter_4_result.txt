@@ -1,0 +1,8 @@
+D is 4
+The point are: 813 242650 297344 349471 
+The edges are: [813 349471]
+[813 242650]
+[813 297344]
+Query size is: 4
+242650 349471 813 297344 
+The sum weight of Tree is: 33.9156

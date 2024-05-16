@@ -1,0 +1,9 @@
+D is 2
+The point are: 528 19193 21721 26419 46099 
+The edges are: [528 19193]
+[528 21721]
+[528 26419]
+[528 46099]
+Query size is: 4
+26419 46099 19193 21721 
+The sum weight of Tree is: 4

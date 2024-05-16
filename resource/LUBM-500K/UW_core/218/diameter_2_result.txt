@@ -1,0 +1,9 @@
+D is 2
+The point are: 451 455 76990 139437 162002 
+The edges are: [455 451]
+[455 162002]
+[455 139437]
+[455 76990]
+Query size is: 4
+451 162002 139437 76990 
+The sum weight of Tree is: 4

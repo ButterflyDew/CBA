@@ -1,0 +1,9 @@
+D is 2
+The point are: 627 17299 132773 154312 460010 
+The edges are: [627 460010]
+[627 154312]
+[627 17299]
+[627 132773]
+Query size is: 4
+17299 132773 154312 460010 
+The sum weight of Tree is: 43.7048

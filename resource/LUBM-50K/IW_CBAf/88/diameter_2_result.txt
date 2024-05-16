@@ -1,0 +1,9 @@
+D is 2
+The point are: 212 8312 18574 19545 33736 
+The edges are: [212 8312]
+[212 18574]
+[212 19545]
+[212 33736]
+Query size is: 4
+19545 33736 8312 18574 
+The sum weight of Tree is: 38.03

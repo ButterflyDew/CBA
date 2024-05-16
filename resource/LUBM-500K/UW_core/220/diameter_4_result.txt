@@ -1,0 +1,11 @@
+D is 4
+The point are: 39 42 43 44 72683 479322 514953 
+The edges are: [39 42]
+[39 43]
+[39 44]
+[43 72683]
+[43 479322]
+[44 514953]
+Query size is: 4
+42 72683 479322 514953 
+The sum weight of Tree is: 6

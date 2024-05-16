@@ -1,0 +1,9 @@
+D is 6
+The point are: 1013 28198 95796 306386 538975 
+The edges are: [1013 95796]
+[1013 28198]
+[1013 306386]
+[1013 538975]
+Query size is: 4
+95796 306386 538975 28198 
+The sum weight of Tree is: 46.3828

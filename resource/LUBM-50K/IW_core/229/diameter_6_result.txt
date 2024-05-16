@@ -1,0 +1,10 @@
+D is 6
+The point are: 5 7 9599 22533 35102 45143 
+The edges are: [5 9599]
+[9599 22533]
+[9599 7]
+[7 35102]
+[7 45143]
+Query size is: 4
+22533 35102 5 45143 
+The sum weight of Tree is: 46.9552

@@ -1,4 +1,0 @@
-D is 2
-The point are: 3 5 9 
-The edges are: [5 3]
-[5 9]

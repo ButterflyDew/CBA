@@ -1,9 +1,0 @@
-The average siz of HBLL is: 3.07143
-The point of Q is: 1
-The query of Q is: 1
-D = 2: optmc is 0ms, loop is 0 ms.
-Ratio = nan
-D = 4: optmc is 0ms, loop is 0 ms.
-Ratio = nan
-D = 6: optmc is 0ms, loop is 0 ms.
-Ratio = nan

@@ -1,0 +1,8 @@
+D is 6
+The point are: 293 78435 144195 283181 
+The edges are: [293 78435]
+[293 144195]
+[293 283181]
+Query size is: 4
+144195 293 78435 283181 
+The sum weight of Tree is: 37.4016

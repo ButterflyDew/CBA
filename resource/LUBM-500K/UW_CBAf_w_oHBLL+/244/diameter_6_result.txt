@@ -1,0 +1,9 @@
+D is 6
+The point are: 1921 266473 316431 394133 535865 
+The edges are: [1921 266473]
+[1921 316431]
+[1921 394133]
+[1921 535865]
+Query size is: 4
+535865 394133 316431 266473 
+The sum weight of Tree is: 4

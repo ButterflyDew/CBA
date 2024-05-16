@@ -1,4 +1,0 @@
-D is 2
-The point are: 3971 9110 47458 
-The edges are: [3971 9110]
-[3971 47458]

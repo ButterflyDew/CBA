@@ -1,0 +1,9 @@
+D is 6
+The point are: 4421 36456 98561 121487 293916 
+The edges are: [4421 36456]
+[4421 98561]
+[4421 121487]
+[4421 293916]
+Query size is: 4
+121487 98561 36456 293916 
+The sum weight of Tree is: 42.1647

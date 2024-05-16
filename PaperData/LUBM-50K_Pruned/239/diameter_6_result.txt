@@ -1,5 +1,0 @@
-D is 6
-The point are: 20 982 4003 7924 
-The edges are: [20 982]
-[20 4003]
-[20 7924]

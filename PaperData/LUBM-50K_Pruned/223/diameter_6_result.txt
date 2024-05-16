@@ -1,5 +1,0 @@
-D is 6
-The point are: 7 299 10780 26704 
-The edges are: [7 299]
-[7 10780]
-[7 26704]

@@ -1,0 +1,9 @@
+D is 2
+The point are: 573 194127 275934 343883 515862 
+The edges are: [573 194127]
+[573 275934]
+[573 343883]
+[573 515862]
+Query size is: 4
+194127 275934 343883 515862 
+The sum weight of Tree is: 4

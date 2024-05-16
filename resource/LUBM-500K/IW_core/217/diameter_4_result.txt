@@ -1,0 +1,11 @@
+D is 4
+The point are: 9 10 12 13 66239 275569 332280 
+The edges are: [9 10]
+[9 12]
+[9 13]
+[12 332280]
+[13 66239]
+[13 275569]
+Query size is: 4
+10 332280 66239 275569 
+The sum weight of Tree is: 73.4702

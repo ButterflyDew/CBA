@@ -1,0 +1,11 @@
+D is 6
+The point are: 6 7 6163 6340 10934 10935 12729 
+The edges are: [6 10934]
+[10934 7]
+[10934 10935]
+[7 6163]
+[7 6340]
+[10935 12729]
+Query size is: 4
+6163 6 6340 12729 
+The sum weight of Tree is: 54.482

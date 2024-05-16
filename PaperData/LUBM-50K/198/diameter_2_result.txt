@@ -1,4 +1,0 @@
-D is 2
-The point are: 326 4734 40355 
-The edges are: [326 4734]
-[326 40355]
